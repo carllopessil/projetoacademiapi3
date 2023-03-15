@@ -8,3 +8,6 @@ projeto integrador do 3° semestre do curso analise e desenvolvimento de sistema
 ![image](https://user-images.githubusercontent.com/104398219/225457870-35c5fde0-a9a0-4688-9ae8-c15ffd43ae8d.png)
 
 ![image](https://user-images.githubusercontent.com/104398104/225458719-cc1c571e-b75a-423f-9a25-29027cccb9f6.png)
+
+![telaCadastro](https://user-images.githubusercontent.com/104325185/225460401-569ea19e-49da-45a8-826c-b6942b98e2ea.png)
+
