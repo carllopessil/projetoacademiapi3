@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+<head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="css/styles-cadastroFuncionario.css" rel="stylesheet" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <title>Cadastro Cliente</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+<div class="container">
+    <div class="header">
+        <h2>Criar uma conta<span class="badge badge-secondary"></span></h2>
+    </div>
+    <form action="senac" method="post" id="form" class="form">
+        <div class="form-control">
+            <label for="name">Nome de usuário</label>
+            <input
+                    name="name"
+                    type="text"
+                    id="name"
+                    placeholder="Digite seu nome de usuário"
+            />
+
+            <small>Mensagem de erro</small>
+        </div>
+        <div>
+            <div class="form-control">
+                <div>
+                    <label for = "sexo">Sexo</label>
+                </div>
+                <select
+                        name="sexo"
+                        id=sexo
+                        required="required">
+                    <option>selecione seu sexo</option>
+                    <option>masculino</option>
+                    <option>feminino</option>
+                    <option>prefiro não declarar</option>
+                </select>
+            </div>
+
+
+            <div class="form-control">
+                <label for="DateBirth">Data de Nascimento</label>
+
+                <input  name="DateBirth"
+                        type="date"
+                        id="DateBirth"
+                />
+                <small>Mensagem de erro</small>
+            </div>
+
+
+
+            <div class="form-control">
+                <label for="email">Email</label>
+
+                <input
+                        name="email"
+                        type="text"
+                        id="Email"
+                        placeholder="Digite seu email"
+                />
+                <small>Mensagem de erro</small>
+            </div>
+
+
+
+
+            <div class="form-control">
+                <label for="Senha">Senha</label>
+                <input
+                        name="senha"
+                        type="password"
+                        id="senha"
+                        placeholder="Digite sua senha"
+                />
+                <small>Mensagem de erro</small>
+            </div>
+
+            <button type="submit">Register</button>
+        </div></form>
+
+</div>
+</body>
+
+</html>
