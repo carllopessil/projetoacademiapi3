@@ -8,6 +8,16 @@ public class GymUser {
     private String email;
     private String senha;
 
+    private String cpf;
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
     public String getSexo() {
         return sexo;
     }

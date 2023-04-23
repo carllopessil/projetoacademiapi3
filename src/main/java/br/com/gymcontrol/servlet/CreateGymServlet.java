@@ -34,6 +34,11 @@ public class CreateGymServlet extends HttpServlet {
         user.setEmail(Email);
         System.out.println(Email);
 
+        String cpf = request.getParameter("cpf");
+        user.setCpf(cpf);
+        System.out.println(cpf);
+
+
         String Senha = request.getParameter("senha");
         user.setSenha(Senha);
         System.out.println(Senha);

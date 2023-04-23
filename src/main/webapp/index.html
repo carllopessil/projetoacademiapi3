@@ -25,14 +25,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div class="form-control">
             <label for="name">Nome de usuário</label>
             <input
+                    required="required"
                     name="name"
                     type="text"
                     id="name"
                     placeholder="Digite seu nome de usuário"
             />
-
             <small>Mensagem de erro</small>
         </div>
+
         <div>
             <div class="form-control">
                 <div>
@@ -53,7 +54,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <div class="form-control">
                 <label for="DateBirth">Data de Nascimento</label>
 
-                <input  name="DateBirth"
+                <input  required="required"
+                        name="DateBirth"
                         type="date"
                         id="DateBirth"
                 />
@@ -66,6 +68,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <label for="email">Email</label>
 
                 <input
+                        required="required"
                         name="email"
                         type="text"
                         id="Email"
@@ -74,12 +77,25 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <small>Mensagem de erro</small>
             </div>
 
+            <div class="form-control">
+                <label for="cpf">cpf</label>
+
+                <input
+                        required="required"
+                        name="cpf"
+                        type="text"
+                        id="cpf"
+                        placeholder="Digite seu cpf"
+                />
+                <small>Mensagem de erro</small>
+            </div>
 
 
 
             <div class="form-control">
                 <label for="Senha">Senha</label>
                 <input
+                        required="required"
                         name="senha"
                         type="password"
                         id="senha"
