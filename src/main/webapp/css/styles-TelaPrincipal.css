@@ -20,7 +20,7 @@ li a {
     color: red;
     text-align: end;
     padding: 05px 11px;
-    text-decoration: #16082f;
+    text-decoration: red;
 }
 
 li a:hover:not(.active) {
