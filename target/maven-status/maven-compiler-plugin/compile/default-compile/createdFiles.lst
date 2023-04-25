@@ -1,6 +1,0 @@
-br\com\gymcontrol\dao\InicioLogedDao.class
-br\com\gymcontrol\dao\GymUserDao.class
-br\com\gymcontrol\servlet\CreateGymServlet.class
-br\com\gymcontrol\servlet\InicioLogedServlet.class
-br\com\gymcontrol\model\GymUser.class
-br\com\gymcontrol\model\InicioLoged.class
