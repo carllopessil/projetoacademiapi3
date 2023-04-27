@@ -1,0 +1,134 @@
+body { /*COLOCA A IMAGEM NO FUNDO*/
+    background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)), url('https://www.webrun.com.br/wp-content/uploads/2017/06/AdobeStock_288854123-768x512.jpeg');
+    background-position: center center;
+    background-size: cover;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+    color: white;
+}
+main {
+    text-align: center;
+    width: 100%;
+        display: flex;
+        color: white;
+}
+
+/*COLOCA CADA ITEM DO LADO DO OUTRO*/
+.menu-content .list-itens {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    color: white;
+}
+/*faz uma lista com o menu*/
+.menu-content .list-itens a {
+    text-decoration: none;
+    color: red;
+    padding: 1.5rem;
+    transform: 2ms ease-in;
+    color: white;
+
+}
+label {
+  display: block;
+  margin-bottom:12px;
+
+}
+
+.second-text { /*A FRASE O CORPO ALCANÇA...-–>*/
+    margin-bottom: 7rem;
+    font-size: 2rem;
+    color: rgb(165, 165, 165);
+    text-transform: uppercase;
+     text-align:center
+        display: flex;
+}
+
+
+footer{
+width: 100%;
+    padding: 15px; /*tamanho*/
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background: #09101D;
+    color: red;
+    box-sizing: border-box;
+    position: absolute;
+
+
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.botao {
+    font-size: 1.2em;
+    background: #000000;
+    border: 0;
+    margin-bottom: 1em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 90%;
+    left: 05%;
+    margin-right: -50%;
+
+}
+
+.form {
+margin-right: 10%;
+top: 90%;
+left: 50%;
+position: relative;
+position_center;
+font-family: helvetica;
+color: white;
+border-color: green;
+
+
+
+}
+.id{
+color: white;
+
+
+}
+
+ul {
+    list-style-type: none;
+    margin: -06px;
+    padding: -300px;
+    overflow: hidden;
+    background-color: #16082f	;
+}
+
+li {
+    float: left;
+    border-right:0px solid ;
+}
+
+li:last-child {
+    border-right:none;
+}
+
+li a {
+    display: block;
+    color: red;
+    text-align: end;
+    padding: 05px 11px;
+    text-decoration: red;
+}
+
+li a:hover:not(.active) {
+    background-color: #16082f;
+
+
+}
+
+
+
