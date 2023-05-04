@@ -3,7 +3,8 @@ ul {
     margin: -06px;
     padding: -300px;
     overflow: hidden;
-    background-color: #16082f	;
+    background-color: #09101d	;
+
 }
 
 li {
@@ -24,13 +25,13 @@ li a {
 }
 
 li a:hover:not(.active) {
-    background-color: #16082f;
+    background-color: #09101d;
 
 
 }
 
 .active {
-    background-color: #16082f;
+    background-color:#09101d;
 }
 
 body{
@@ -80,93 +81,144 @@ body{
     }
 
 
+}.modalDialog {
+   position: fixed;
+   font-family: Arial, Helvetica, sans-serif;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 0.8);
+   z-index: 99999;
+   opacity: 0;
+   -webkit-transition: opacity 400ms ease-in;
+   -moz-transition: opacity 400ms ease-in;
+   transition: opacity 400ms ease-in;
+   pointer-events: none;
+ }
+ .modalDialog:target {
+   opacity: 1;
+   pointer-events: auto;
+ }
+ .modalDialog > div {
+   width: 400px;
+   position: relative;
+   margin: 10% auto;
+   padding: 5px 20px 13px 20px;
+   border-radius: 10px;
+   background: red;
+   background: -moz-linear-gradient(red);
+   background: -webkit-linear-gradient(red);
+   background: -o-linear-gradient(red);
+ }
+ .close {
+   background: black;
+   color: red;
+   line-height: 25px;
+   position: absolute;
+   right: -12px;
+   text-align: center;
+   top: -10px;
+   width: 24px;
+   text-decoration: none;
+   font-weight: bold;
+   -webkit-border-radius: 12px;
+   -moz-border-radius: 12px;
+   border-radius: 12px;
+   -moz-box-shadow: 1px 1px 3px #000;
+   -webkit-box-shadow: 1px 1px 3px #000;
+   box-shadow: 1px 1px 3px #000;
+ }
+ .close:hover {
+   background: #00d9ff;
+ }
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #480ca8;
 }
 
-h1 {
-  text-align: center;
-  font-family: Tahoma, Arial, sans-serif;
-  color: red;
-  margin: 80px 0;
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 40px;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    gap: 5px
 }
 
-.box {
-  width: 40%;
-  margin: 0 auto;
-  background: rgba(255,255,255,0.2);
-  padding: 35px;
-  border: 2px solid black;
-  border-radius: 20px/50px;
-  background-clip: padding-box;
-  text-align: center;
+.areaLogin img {
+    width: 420px;
 }
 
-.button {
-  font-size: 1em;
-  padding: 10px;
-  color: red;
-  border: 2px solid black;
-  border-radius: 20px/50px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-}
-.button:hover {
-  background: black;
+.formLogin h1 {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.3em;
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
+.formLogin p {
+    display: inline-block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
 }
 
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: black;
-  border-radius: 5px;
-  width: 30%;
-  transition: all 5s ease-in-out;
+.formLogin input {
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
 }
 
-.popup h2 {
-  margin-top: 0;
-  color: black;
-  font-family: Tahoma, Arial, sans-serif;
-}
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: black;
-}
-.popup .close:hover {
-  color: black;
-}
-.popup .content {
-  max-height: 30%;
-  overflow: auto;
+
+.formLogin input:focus {
+    border: 1px solid #f72585;
 }
 
-@media screen and (max-width: 700px){
-  .box{
-    width: 70%;
-  }
-  .popup{
-    width: 70%;
-  }
+.formLogin label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.formLogin a {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #555;
+    transition: all linear 160ms;
+}
+
+.formLogin a:hover {
+    color: red;
+}
+
+.btn {
+    background-color: black;
+    color: red;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 10!important;
+
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: white;
+
 }
