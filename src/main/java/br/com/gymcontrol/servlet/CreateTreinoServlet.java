@@ -11,23 +11,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 
-    @WebServlet("/create-treino")
+@WebServlet("/create-treino")
     public class CreateTreinoServlet extends HttpServlet {
 
         @Override
         protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
 
-            String exercicio = request.getParameter("create-treino");
-
 
             CadastroTreino treino = new CadastroTreino();
+
+            String exercicio = request.getParameter("exercicio");
             treino.setExercicio(exercicio);
             System.out.println(exercicio);
-
-
 
             String repeticao = request.getParameter("repeticao");
             treino.setRepeticao(repeticao);
@@ -38,8 +37,14 @@ import java.io.IOException;
             treino.setCarga(carga);
             System.out.println(carga);
 
+            List<CadastroTreino> cars = new CadastroTreinoDao().findAllTreino();
+            request.setAttribute("cars", cars);
+
+
             new CadastroTreinoDao().createTreino(treino);
             request.getRequestDispatcher("CadastroTreino.jsp").forward(request, response);
+
+
 
         }
 
