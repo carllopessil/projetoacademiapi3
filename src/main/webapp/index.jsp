@@ -2,7 +2,7 @@
 <body>
 <h2>Create Car</h2>
 
-<form action="/create-car" method="post">
+<form action="/create-treino" method="post">
 
     <button type="submit">IR PARA CADASTRAR TREINO</button>
 
