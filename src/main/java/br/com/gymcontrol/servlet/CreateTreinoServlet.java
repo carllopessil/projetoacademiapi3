@@ -15,39 +15,37 @@ import java.util.List;
 
 
 @WebServlet("/create-treino")
-    public class CreateTreinoServlet extends HttpServlet {
+public class CreateTreinoServlet extends HttpServlet {
 
-        @Override
-        protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-
-
-
-            CadastroTreino treino = new CadastroTreino();
-
-            String exercicio = request.getParameter("exercicio");
-            treino.setExercicio(exercicio);
-            System.out.println(exercicio);
-
-            String repeticao = request.getParameter("repeticao");
-            treino.setRepeticao(repeticao);
-            System.out.println(repeticao);
-
-
-            String carga = request.getParameter("carga");
-            treino.setCarga(carga);
-            System.out.println(carga);
-
-            List<CadastroTreino> cars = new CadastroTreinoDao().findAllTreino();
-            request.setAttribute("cars", cars);
-
-
-            new CadastroTreinoDao().createTreino(treino);
-            request.getRequestDispatcher("CadastroTreino.jsp").forward(request, response);
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
 
 
-        }
+        CadastroTreino treino = new CadastroTreino();
+
+        String exercicio = request.getParameter("exercicio");
+        treino.setExercicio(exercicio);
+        System.out.println(exercicio);
+
+        String repeticao = request.getParameter("repeticao");
+        treino.setRepeticao(repeticao);
+        System.out.println(repeticao);
+
+
+        String carga = request.getParameter("carga");
+        treino.setCarga(carga);
+        System.out.println(carga);
+
+        List<CadastroTreino> cars = new CadastroTreinoDao().findAllTreino();
+        request.setAttribute("cars", cars);
+
+
+        new CadastroTreinoDao().createTreino(treino);
+        request.getRequestDispatcher("CadastroTreino.jsp").forward(request, response);
+
+
 
     }
 
-
+}

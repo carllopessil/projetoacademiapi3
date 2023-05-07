@@ -13,16 +13,16 @@ import java.util.List;
 @WebServlet("/find-all-treino")
 public class ListTreinoServlet extends HttpServlet {
 
-        @Override
-        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-            List<CadastroTreino> cars = new CadastroTreinoDao().findAllTreino();
+        List<CadastroTreino> cars = new CadastroTreinoDao().findAllTreino();
 
-            req.setAttribute("cars", cars);
+        req.setAttribute("cars", cars);
 
-            req.getRequestDispatcher("CadastroTreino.jsp").forward(req, resp);
+        req.getRequestDispatcher("CadastroTreino.jsp").forward(req, resp);
 
-        }
+    }
 
 
 }

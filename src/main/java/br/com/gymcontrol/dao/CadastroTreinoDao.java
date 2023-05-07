@@ -33,7 +33,7 @@ public class CadastroTreinoDao {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             preparedStatement.setString(1, cadastroTreino.getExercicio()); //1 = primeiro paramentro identificando na String SQL do ponto de interrogação
             preparedStatement.setString(2, cadastroTreino.getRepeticao());
-           preparedStatement.setString(3, cadastroTreino.getCarga());
+            preparedStatement.setString(3, cadastroTreino.getCarga());
             System.out.println(cadastroTreino.getExercicio());
             System.out.println(cadastroTreino.getExercicio());
             System.out.println(cadastroTreino.getRepeticao());
@@ -93,5 +93,3 @@ public class CadastroTreinoDao {
 
     }
 }
-
-
