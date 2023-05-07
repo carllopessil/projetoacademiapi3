@@ -33,16 +33,15 @@
     <form class="form" action="/create-treino" method="post">
         <h1>CADASTRE NOVO TREINO:</h1>
         <label>Escolha o exercicio:</label>
-        <select>
+        <select name="exercicio" id="exercicio">
             <c:forEach var="car" items="${cars}">
-                <option value="${car.exercicio}">${car.exercicio}</option>
-
+                <option  value="${car.exercicio}">${car.exercicio}</option>
             </c:forEach>
 
         </select>
 
         <label>Escolha a quantidade de repeticao :</label>
-        <select>
+        <select name="repeticao" id="repeticao" >
             <c:forEach var="car" items="${cars}">
                 <option value="${car.repeticao}">${car.repeticao}</option>
 
@@ -50,7 +49,7 @@
         </select>
 
         <label>Escolha a quantidade de carga:</label>
-        <select>
+        <select name="carga" id="carga" >
             <c:forEach var="car" items="${cars}">
                 <option value="${car.carga}">${car.carga}</option>
 

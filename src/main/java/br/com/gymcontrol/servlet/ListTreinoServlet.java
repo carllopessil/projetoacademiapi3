@@ -10,13 +10,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-@WebServlet("/find-all-cars")
+@WebServlet("/find-all-treino")
 public class ListTreinoServlet extends HttpServlet {
 
         @Override
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-            List<CadastroTreino> cars = new CadastroTreinoDao().findAllCars();
+            List<CadastroTreino> cars = new CadastroTreinoDao().findAllTreino();
 
             req.setAttribute("cars", cars);
 
