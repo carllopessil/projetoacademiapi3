@@ -6,8 +6,22 @@ public class CadastroTreino {
     private String exercicio;
     private String repeticao;
     private String carga;
+    private String diaSemana;
+
+
+
+    public String getDiaSemana() {
+        return diaSemana;
+    }
+
+    public void setDiaSemana(String diaSemana) {
+        this.diaSemana = diaSemana;
+    }
+
+
 
     public CadastroTreino(String exercicio) {
+
         this.exercicio = exercicio;
     }
 
@@ -23,11 +37,12 @@ public class CadastroTreino {
         return exercicio;
     }
 
-    public CadastroTreino(String id, String exercicio, String repeticao, String carga) {
+    public CadastroTreino(String id, String exercicio, String repeticao, String carga, String diaSemana) {
         this.id = id;
         this.exercicio = exercicio;
         this.repeticao = repeticao;
         this.carga = carga;
+        this.diaSemana = diaSemana;
     }
 
     public String getCarga() {

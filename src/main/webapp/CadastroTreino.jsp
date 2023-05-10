@@ -1,4 +1,3 @@
-
 <html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
@@ -6,17 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/3df637a2f2.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="styles-CadastroTreino.css">
+    <link href="css/styles-CadastroTreino.css" rel="stylesheet" type="text/css"/>
     <title>Page Academia</title>
 </head>
 
 <header>
     <div class="menu-content">
-        <img src="Imagem2.png">
-        <h1 class="logo"> GYM-CENTER</h1>
-        <nav class="header-menu">
+        <img src="Imagem2.png"> <h1 class="logo"> GYM-CENTER</h1>
 
-            <ul class="list-itens">
+            <nav class="list-itens">
                 <li><a href="index.jsp">Home</a></li>
                 <li><a href="#">serviços</a></li>
                 <li><a href="#">Sobre</a></li>
@@ -30,10 +27,10 @@
 <body>
 
 <div>
-    <form class="form" action="/create-treino" method="post">
+    <form class="form" style="text-align: center" action="/create-treino" method="post">
         <h1>CADASTRE NOVO TREINO:</h1>
         <label>Escolha o exercicio:</label>
-        <select name="exercicio" id="exercicio">
+        <select class="custom-select" name="exercicio" id="exercicio">
             <c:forEach var="car" items="${cars}">
                 <option  value="${car.exercicio}">${car.exercicio}</option>
             </c:forEach>
@@ -41,7 +38,7 @@
         </select>
 
         <label>Escolha a quantidade de repeticao :</label>
-        <select name="repeticao" id="repeticao" >
+        <select class="custom-select" name="repeticao" id="repeticao" >
             <c:forEach var="car" items="${cars}">
                 <option value="${car.repeticao}">${car.repeticao}</option>
 
@@ -49,13 +46,19 @@
         </select>
 
         <label>Escolha a quantidade de carga:</label>
-        <select name="carga" id="carga" >
+        <select class="custom-select" name="carga" id="carga" >
             <c:forEach var="car" items="${cars}">
                 <option value="${car.carga}">${car.carga}</option>
 
             </c:forEach>
         </select>
-            <button type="submit" value="Submit">Register</button>
+                <label>Escolha a quantidade de carga:</label>
+                <select class="custom-select" name="diaSemana" id="diaSemana" >
+                    <c:forEach var="car" items="${cars}">
+                        <option value="${car.diaSemana}">${car.diaSemana}</option>
+                    </c:forEach>
+                </select>
+            <button class="btn btn-primary" type="submit" value="Submit">Register</button>
 
     </form>
 
