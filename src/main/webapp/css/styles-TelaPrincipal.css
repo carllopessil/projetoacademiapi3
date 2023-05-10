@@ -6,29 +6,24 @@ ul {
     background-color: #09101d	;
 
 }
-
-li {
-    float: left;
-    border-right:0px solid ;
+header {
+    background-color: #090E1D;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
 }
-
-li:last-child {
-    border-right:none;
-}
-
-li a {
-    display: block;
+header h1 {
     color: red;
-    text-align: end;
-    padding: 05px 11px;
-    text-decoration: red;
+    font-weight: bold;
+    margin: 0;
+}
+header span {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 16px;
 }
 
-li a:hover:not(.active) {
-    background-color: #09101d;
-
-
-}
 
 .active {
     background-color:#09101d;
