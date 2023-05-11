@@ -1,6 +1,7 @@
 br\com\gymcontrol\servlet\DeleteTreinoServlet$DeleteCarServlet.class
 br\com\gymcontrol\servlet\BuscaTreinos.class
 br\com\gymcontrol\servlet\CreateGymServlet.class
+br\com\gymcontrol\dao\UserDao.class
 br\com\gymcontrol\model\GymUser.class
 br\com\gymcontrol\dao\CadastroTreinoDao.class
 br\com\gymcontrol\model\TreinosCadastrados.class
@@ -10,6 +11,8 @@ br\com\gymcontrol\dao\GymUserDao.class
 br\com\gymcontrol\servlet\DeleteTreinoServlet.class
 br\com\gymcontrol\dao\InicioLogedDao.class
 br\com\gymcontrol\model\CadastroTreino.class
+br\com\gymcontrol\model\User.class
 br\com\gymcontrol\servlet\InicioLogedServlet.class
 br\com\gymcontrol\model\InicioLoged.class
 br\com\gymcontrol\servlet\ListCadastroTreinoServlet.class
+br\com\gymcontrol\servlet\LoginServlet.class
