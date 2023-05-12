@@ -8,20 +8,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class DeleteTreinoServlet {
-    @WebServlet("/delete-treino")
-    public class DeleteCarServlet extends HttpServlet {
+@WebServlet("/deleteTreino")
+public class DeleteTreinoServlet extends HttpServlet{
 
         @Override
         protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+            String cadId = req.getParameter("id");
+            System.out.println(cadId);
 
-            String carId = req.getParameter("id");
+            new CadastroTreinoDao().deleteTreinoById(cadId);
 
-            new CadastroTreinoDao().deleteTreinoById(carId);
+            resp.sendRedirect("/buscatreinos123");
 
-            resp.sendRedirect("/find-all-treino");
 
-        }
 
     }
 }

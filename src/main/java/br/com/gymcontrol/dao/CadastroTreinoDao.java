@@ -103,9 +103,8 @@ public class CadastroTreinoDao {
 
     }
 
-
     public void deleteTreinoById(String TreinoId) {
-        String SQL = "DELETE TREINOCADASTRO WHERE ID = ?";
+        String SQL = "DELETE TREINOSCADASTRO WHERE ID = ?";
 
         try {
 
@@ -174,6 +173,36 @@ public class CadastroTreinoDao {
         }
 
 
+
+    }
+
+
+    public void updateTreino(CadastroTreino treino) {
+
+        String SQL = "UPDATE CAR SET NAME = ? WHERE ID = ?";
+
+        try {
+
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa","sa");
+
+            System.out.println("success in database connection");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            preparedStatement.setString(1, treino.getExercicio());
+            preparedStatement.setString(2, treino.getId());
+            preparedStatement.execute();
+
+            System.out.println("success in update car");
+
+            connection.close();
+
+        } catch (Exception e) {
+
+            System.out.println("fail in database connection");
+            System.out.println("Error: " + e.getMessage());
+
+        }
 
     }
 

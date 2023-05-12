@@ -20,6 +20,8 @@ public class CreateTreinoServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
+
+
         CadastroTreino treino = new CadastroTreino();
 
         String exercicio = request.getParameter("exercicio");
