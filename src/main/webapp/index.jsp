@@ -9,13 +9,10 @@
 </form>
 
 
-<form action="/busca-treinos" method="post">
-
+<form action="/buscatreinos123" method="get">
     <button type="submit">IR PARA TREINO</button>
 
 </form>
-
-<a href="AlterarTreino.jsp">Visualizar usuarios</a>
 
 </body>
 </html>

@@ -6,21 +6,17 @@
 
   <meta charset="UTF-8">
   <table>
-    <tr>
-      <th>ID</th>
-      <th>exercicio</th>
-    </tr>
-    <c:forEach var="car" items="${cars}">
-      <tr>
-        <td>${car.id}</td>
-        <td>${car.exercicio}</td>
+    <c:forEach var="TreinosCad" items="${TreinosCad}">
+<div>
+        <text value="${TreinosCad.exercicio}">${TreinosCad.exercicio}</text>
+        <text value="${TreinosCad.repeticao}">${TreinosCad.repeticao}</text>
+        <text value="${TreinosCad.carga}">${TreinosCad.carga}</text>
+       <text value="${TreinosCad.diaSemana}">${TreinosCad.diaSemana}</text>
 
-        <form action="/delete-treino" method="post">
-                            <input type="hidden" id="id" name="id" value="${car.id}">
-                            <button type="submit">Delete</button>
-                        </form>
-
-      </tr>
+</div>
     </c:forEach>
+
+
+
   </table>
 </html>

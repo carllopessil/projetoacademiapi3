@@ -14,9 +14,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class CadastroTreinoDao {
-    public CadastroTreinoDao(String exercicio) {
 
-    }
 
     public CadastroTreinoDao() {
 
@@ -134,7 +132,7 @@ public class CadastroTreinoDao {
 
     public List<TreinosCadastrados> findAllCadastro() {
 
-        String SQL = "SELECT * FROM TREINOCADASTRO";
+        String SQL = "SELECT * FROM TREINOSCADASTRO";
 
         try {
 
