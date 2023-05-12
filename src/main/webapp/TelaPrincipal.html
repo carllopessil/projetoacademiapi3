@@ -18,7 +18,9 @@
     <span><a href="#openModal"><h2>Login</h2></a></span>
 
     <div id="openModal" class="modalDialog">
+
         <div>
+            <a class="close" href="/TelaPrincipal.html">&times;</a>
             <form action="/login" method="post" class="form-container">
             <h3>Login</h3>
                     <label for="username"><b>Email</b></label>
@@ -26,9 +28,12 @@
 
                     <label for="password"><b>Password</b></label>
                     <input type="password" placeholder="Enter Password" name="password" required>
-                <button>Login</button>
+
+                <button type="submit" class="btn">Login</button>
+
             </form>
-            <a href="CadastroCliente.html"><button>Registra-se</button></a>
+            <a href="CadastroCliente.html"><button class="btnCAD" >Registra-se</button></a>
+
         </div>
     </div>
 </header>

@@ -253,6 +253,17 @@ h2{
     background-color: white;
     outline: none;
 }
+.btnCAD {
+    background-color: black;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
 
 .form-container .btn {
     background-color: black;
@@ -265,13 +276,17 @@ h2{
     opacity: 0.8;
 }
 
+.open-button {
+     background-color: black;
+     color: white;
+     padding: 16px 20px;
+     border: none;
+     cursor: pointer;
+     opacity: 0.8;
+     position: fixed;
+     bottom: 23px;
+     right: 28px;
+     width: 280px;
+ }
 
-.form-container .cancel {
-    background-color: red;
-}
-
-
-.form-container .btn:hover, .open-button:hover {
-    opacity: 1;
-}
 
