@@ -97,7 +97,7 @@ body{
    pointer-events: auto;
  }
  .modalDialog > div {
-   width: 400px;
+   width: 378px;
    position: relative;
    margin: 10% auto;
    padding: 5px 20px 13px 20px;
@@ -201,17 +201,7 @@ body{
     color: red;
 }
 
-.btn {
-    background-color: black;
-    color: red;
-    font-size: 14px;
-    font-weight: 600;
-    border: none;
-    transition: all linear 160ms;
-    cursor: pointer;
-    margin: 10px;
 
-}
 
 .btn:hover {
     transform: scale(1.05);
@@ -256,37 +246,32 @@ h2{
 .btnCAD {
     background-color: black;
     color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom:10px;
-    opacity: 0.8;
+      border: 0;
+      padding: 10px;
+      width: 99%;
+      height: 50px;
+      display: inline-block;
+      margin: -04px;
+      cursor: pointer;
+      border-radius: 9px;
+
 }
 
 
 .form-container .btn {
-    background-color: black;
+    background-color: navy;
     color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom:10px;
-    opacity: 0.8;
+     border: 0;
+     padding: 10px;
+     width: 123%;
+     height: 50px;
+     display: inline-block;
+     margin: -10px;
+     cursor: pointer;
+     border-radius: 9px;
+
 }
 
-.open-button {
-     background-color: black;
-     color: white;
-     padding: 16px 20px;
-     border: none;
-     cursor: pointer;
-     opacity: 0.8;
-     position: fixed;
-     bottom: 23px;
-     right: 28px;
-     width: 280px;
- }
+
 
 
