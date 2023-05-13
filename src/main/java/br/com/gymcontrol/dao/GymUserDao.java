@@ -30,6 +30,29 @@ public class GymUserDao {
 
         }
 
+
+        }
+
+        public void UpdateUser(GymUser gymUser){
+         String SQL = "UPDATE GYMUSER (NAME, SEXO, DATEBIRTH, EMAIL) = ?,?,?,?; WHERE ID=?";
+         try{
+             Connection connection = DriverManager.getConnection("jdbc:h2:~/test","sa","sa");
+             System.out.println("success in connection");
+             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+             preparedStatement.setString(1, gymUser.getName());
+             preparedStatement.setString(2, gymUser.getSexo());
+             preparedStatement.setString(3, gymUser.getDateBirth());
+             preparedStatement.setString(4, gymUser.getEmail());
+             System.out.println("success in update gymUser");
+
+             connection.close();
+
+
+         }catch (Exception e ){
+             System.out.println("deu ruim na conexão");
+
     }
 
+    }
 }
+

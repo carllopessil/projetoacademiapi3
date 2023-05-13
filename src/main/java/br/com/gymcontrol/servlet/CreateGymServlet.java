@@ -17,6 +17,8 @@ public class CreateGymServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        String userId = request.getParameter("id");
+
         String name = request.getParameter("name");
         GymUser user = new GymUser();
         user.setName(name);
