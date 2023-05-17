@@ -21,6 +21,5 @@ public class DeleteTreinoServlet extends HttpServlet{
             resp.sendRedirect("/buscatreinos123");
 
 
-
     }
 }

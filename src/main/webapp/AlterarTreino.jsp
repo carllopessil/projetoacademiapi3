@@ -7,15 +7,41 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
   <meta charset="UTF-8">
+
+
+
+  <header>
+      <div class="menu-content">
+
+
+          <img src="Imagem/ff.png"> <h1 class="logo">
+           GYM-CENTER</h1>
+
+              <nav class="list-itens">
+                  <li><a href="index.jsp">Home</a></li>
+                  <li><a href="CadastroTreino.jsp">CadastroTreino</a></li>
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li><img src="Imagem/peso.png"></i></a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
   <body>
-  <h1>TREINOS CADASTRADOS</h1>
+<div class="h1">
+<h1>TREINOS CADASTRADOS</h1>
+
+</div>
   <table id="tabela">
+
   <thead>
   		<tr>
   				<th>Exercicio</th>
   				<th>Repeticao</th>
   				<th>Carga</th>
   				<th>Dia da semana</th>
+  				<th>Apagar</th>
+
   			</tr>
   		</thead>
   		<tbody>
@@ -32,8 +58,6 @@
 <form action="/deleteTreino" method="post">
                     <input type="hidden" id="id" name="id" value="${TreinosCad.id}">
                     <button class= "btn-primary" type="submit">Delete</button>
-                <span> | </span>
-                <a href="index.jsp?id=${TreinosCad.id}&name=${TreinosCad.Exercicio}">Update</a>
                 </form>
                 </td>
                 </tr>
@@ -44,5 +68,10 @@
 </table>
 
 
-  <body>
+<div class="frases">
+<h1>Gerencie seus treinos a qualquer momento</h1>
+
+</div>
+
+  </body>
 </html>

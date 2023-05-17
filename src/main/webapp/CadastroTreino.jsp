@@ -11,15 +11,14 @@
 
 <header>
     <div class="menu-content">
-        <img src="Imagem2.png"> <h1 class="logo"> GYM-CENTER</h1>
+        <img src="Imagem/ff.png"> <h1 class="logo"> GYM-CENTER</h1>
 
             <nav class="list-itens">
                 <li><a href="index.jsp">Home</a></li>
-                <li><a href="#">serviços</a></li>
+                <li><a href="AlterarTreino.jsp">Todos os treinos</a></li>
                 <li><a href="#">Sobre</a></li>
-                <li><a href="#">contatos</a></li>
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li><img src="Imagem/peso.png"></i></a></li>
             </ul>
         </nav>
     </div>
@@ -61,6 +60,13 @@
             <button class="btn btn-primary" type="submit" value="Submit">Register</button>
 
     </form>
+
+    <div class="second-text">
+    <h1>O corpo alcanca o que a mente acredita</h1>
+
+    </div>
+
+
 
 </div>
 </body>

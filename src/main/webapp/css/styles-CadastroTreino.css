@@ -19,19 +19,22 @@ main {
     list-style: none;
     gap: 10px;
     color: white;
+
+
+
 }
 /*faz uma lista com o menu*/
 .menu-content {
 font-family: Arial Bold;
-font-size:24px;
-font-weight:20
+font-size:17px;
     text-decoration: bold;
     background-color: #09101d;
-    transform: 2ms ease-in;
     color: red;
-                display: flex;
-                justify-content: space-between;
-                padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+   padding: 1rem 1rem;
+
+
 
 
 }
@@ -42,7 +45,7 @@ label {
 }
 
 .second-text { /*A FRASE O CORPO ALCANÇA...-–>*/
-    font-size: 2rem;
+    font-size: 20px;
     color: rgb(165, 165, 165);
     text-transform: uppercase;
      text-align:center
@@ -60,6 +63,7 @@ width: 100%;
     color: red;
     box-sizing: border-box;
     position: absolute;
+
 
 
 }
@@ -102,7 +106,6 @@ width: 100%;
   appearance: none;
 }
 .form {
-
 position: relative;
 align: center;
 font-family: helvetica;
@@ -114,13 +117,13 @@ border-color: green;
 .id{
 color: white;
 
-
-
 }
 .btn-primary {
   color: white;
   background-color: red;
   border-color: red;
+  padding: 3px 10px 3px 10px;
+
 }
 
 ul {
@@ -155,12 +158,39 @@ li a:hover:not(.active) {
 }
 .botao1 {
 	text-decoration: none;
-	background-color: #66bbff;
 	padding: 5px 10px 5px 10px;
 	color: #fff;
 	font-size: 1.2em;
 	font-weight: 700;
-	border-radius: 5px;
 	border: 0;
 	cursor: pointer;
 }
+#tabela {
+	margin: auto;
+	border-collapse: collapse;
+}
+
+#tabela th {
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: left;
+	color: #fff;
+}
+
+#tabela td {
+	border: 1px solid #ddd;
+	padding: 10px;
+}
+
+.h1{
+text-align: center;
+font-size: 1em;
+
+}
+
+.frases { /*A FRASE O CORPO ALCANÇA...-–>*/
+    color: rgb(165, 165, 165);
+    text-transform: uppercase;
+     text-align:center
+}
+

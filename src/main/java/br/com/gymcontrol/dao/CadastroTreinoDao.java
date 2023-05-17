@@ -5,10 +5,7 @@ import br.com.gymcontrol.model.TreinosCadastrados;
 
 
 import javax.swing.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -22,7 +19,6 @@ public class CadastroTreinoDao {
 
     public void createTreino(CadastroTreino cadastroTreino) {
         String SQL = "INSERT INTO TREINOSCADASTRO (EXERCICIO, REPETICAO, CARGA, DIASEMANA) VALUES (?, ?, ?, ?)";
-
 
 
         try {
@@ -42,7 +38,7 @@ public class CadastroTreinoDao {
 
             preparedStatement.execute();
             System.out.println("success in connection");
-            JOptionPane.showMessageDialog(null,"Treino cadastrado");
+            JOptionPane.showMessageDialog(null, "Treino cadastrado");
 
             connection.close();
 
@@ -98,8 +94,6 @@ public class CadastroTreinoDao {
             return Collections.emptyList();
 
         }
-
-
 
     }
 
@@ -171,39 +165,59 @@ public class CadastroTreinoDao {
             return Collections.emptyList();
 
         }
-
-
-
     }
 
 
-    public void updateTreino(CadastroTreino treino) {
 
-        String SQL = "UPDATE CAR SET NAME = ? WHERE ID = ?";
 
-        try {
+    private static final String URL = "jdbc:h2:~/test";
+    private static final String USUARIO = "sa";
+    private static final String SENHA = "sa";
 
-            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa","sa");
+    public static List<CadastroTreino> buscarDadosPorDiaSemana(String diaSemana) {
+        List<CadastroTreino> resultados = new ArrayList<>();
 
-            System.out.println("success in database connection");
+        try (Connection conn = DriverManager.getConnection(URL, USUARIO, SENHA)) {
+            String query = "SELECT * FROM TREINOSCADASTRO WHERE diaSemana = ?";
+            PreparedStatement stmt = conn.prepareStatement(query);
+            System.out.println("validando o select");
+            stmt.setString(1, diaSemana);
 
-            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            ResultSet rs = stmt.executeQuery();
 
-            preparedStatement.setString(1, treino.getExercicio());
-            preparedStatement.setString(2, treino.getId());
-            preparedStatement.execute();
+            while (rs.next()) {
 
-            System.out.println("success in update car");
+                String id = rs.getString("id");
+                String exercicio = rs.getString("exercicio");
+                String repeticao = rs.getString("repeticao");
+                String carga = rs.getString("carga");
+                String diaSemana2 = rs.getString("diaSemana");
 
-            connection.close();
+                CadastroTreino cadastroTreino = new CadastroTreino(id, exercicio, repeticao, carga, diaSemana2);
+                resultados.add(cadastroTreino);
+            }
 
-        } catch (Exception e) {
+        } catch (SQLException e) {
+            System.out.println("não entrou");
 
-            System.out.println("fail in database connection");
-            System.out.println("Error: " + e.getMessage());
-
+            e.printStackTrace();
         }
+
+        return resultados;
 
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
