@@ -1,4 +1,3 @@
-
 <html>
 <head>
     <link rel="stylesheet" href="css/styles-TelaPrincipal.css">
@@ -9,6 +8,7 @@
 
     <title>Tela Principal</title>
     <meta charset="UTF-8">
+    <%@ page contentType="text/html; charset=UTF-8" %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -20,9 +20,12 @@
     <div id="openModal" class="modalDialog">
 
         <div>
-            <a class="close" href="/TelaPrincipal.html">&times;</a>
+            <a class="close" href="/TelaPrincipal.jsp">&times;</a>
             <form action="/login" method="post" class="form-container">
+<h3>${requestScope.message}</h3>
             <h3>Login</h3>
+
+
                     <label for="username"><b>Email</b></label>
                     <input type="text" placeholder="Entre com seu Email" name="username" required>
 
@@ -44,7 +47,7 @@
         <div class="secao4-div-1">
             <div class="secao4-div-1-coluna">
 
-                <img decoding="async" loading="lazy" src="Imagem/academia%201.jpg" width="100%" height="100">
+                <img decoding="async" loading="lazy" src="Imagem/academia-app.png" width="100%" height="100">
                 <h3>GYM CENTER</h3>
                 <p> A GYM CENTER é um app de academia abrangente e intuitivo, projetado para fornecer a você todas as ferramentas necessárias para alcançar seus objetivos de condicionamento físico de forma prática e eficiente.</p>
             </div>
@@ -55,7 +58,7 @@
 
                 <img decoding="async" loading="lazy" src="Imagem/Treino-musculacao-definicao-masculino-3.jpg" width="100%" height="80">
                 <h3>TREINOS E PROGRAMAS DE EXERCÍCIOS</h3>
-                <p>No nosso app uma existe biblioteca de treinos e programas de exercícios para diferentes objetivos, como perda de peso, ganho de massa muscular ou condicionamento físico geral. Inclua descrições detalhadas, vídeos de demonstração e orientações sobre o número de repetições e séries. </p>
+                <p>No nosso app uma existe biblioteca de treinos e programas de exercícios para diferentes objetivos, como perda de peso, ganho de massa muscular ou condicionamento físico geral. </p>
             </div>
         </div>
 
@@ -79,7 +82,7 @@
 
                 <img decoding="async" loading="lazy" src="Imagem/images%202.jpg" width="100%" height="80">
                 <h3>REGISTROS E ACOMPANHAMENTOS</h3>
-                <p>  </p>
+                <p> O registros e acompanhamentos do nosso app  faz você chegar nos seus objetivos e nas necessidades  de forma segura e equilibrada é mantendo  um registro detalhado do seu progresso.  </p>
             </div>
         </div>
 

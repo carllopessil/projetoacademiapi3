@@ -17,7 +17,8 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        req.getRequestDispatcher("TelaPrincipal.html").forward(req, resp);
+        req.setAttribute("message", "Login invalido!!");
+        req.getRequestDispatcher("TelaPrincipal.jsp").forward(req, resp);
 
     }
 
@@ -39,9 +40,8 @@ public class LoginServlet extends HttpServlet {
 
         } else {
 
-            req.setAttribute("message", "Invalid credentials!");
 
-//            req.getRequestDispatcher("TelaPrincipal.html").forward(req, resp);
+//            req.getRequestDispatcher("TelaPrincipal.jsp").forward(req, resp);
 
             resp.sendRedirect("/login#openModal");
 
