@@ -22,7 +22,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <div class="header">
         <h2>Criar uma conta<span class="badge badge-secondary"></span></h2>
     </div>
-    <form action="senac" method="post" id="form" class="form">
+    <form action="/senac" method="post" id="form" class="form">
         <div class="form-control">
             <label for="name">Nome de usuário</label>
             <input
