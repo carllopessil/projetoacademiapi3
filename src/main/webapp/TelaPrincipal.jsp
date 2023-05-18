@@ -35,7 +35,7 @@
                 <button type="submit" class="btn">Login</button>
 
             </form>
-            <a href="CadastroCliente.html"><button class="btnCAD" >Registra-se</button></a>
+            <a href="CadastroCliente.jsp"><button class="btnCAD" >Registra-se</button></a>
 
         </div>
     </div>

@@ -5,7 +5,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 -->
 <html>
 <head>
-    
+        <script src="\js\scripCadastro.js"></script>
+
     <link href="css/styles-cadastroCliente.css" rel="stylesheet" type="text/css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -103,11 +104,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <small>Mensagem de erro</small>
         </div>
 
-        <a href="TelaPrincipal.jsp"></a> <button type="submit">Register</button>
+       <button type="submit">Register</button>
     </form>
 
 </div>
 </body>
-
 </html>
-<script src="\js\scripCadastro.js"></script>

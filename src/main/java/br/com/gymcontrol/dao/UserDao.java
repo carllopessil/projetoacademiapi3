@@ -69,7 +69,7 @@ public class UserDao {
 
             System.out.println("success in select username");
 
-            String cpf= .getString("resultSetRows")
+            String cpf= resultSet.getString("resultSetRows");
 
 
 

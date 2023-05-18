@@ -46,7 +46,7 @@ public class CreateGymServlet extends HttpServlet {
         System.out.println(Senha);
 
         new GymUserDao().GymUser(user);
-        request.getRequestDispatcher("CadastroCliente.html").forward(request, response);
+        request.getRequestDispatcher("CadastroCliente.jsp").forward(request, response);
 
     }
 
