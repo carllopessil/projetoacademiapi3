@@ -9,11 +9,9 @@
 
 </form>
 
-
 <form action="/buscatreinos123" method="get">
     <button type="submit">IR PARA TREINO</button>
 </form>
-
 
 <head>
     <title>Tela de Consulta</title>

@@ -28,6 +28,8 @@ public class LoginServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
 
+
+
         User user = new User(username, password);
 
         boolean isValidUser = new UserDao().verifyCredentials(user);
@@ -37,6 +39,8 @@ public class LoginServlet extends HttpServlet {
             req.getSession().setAttribute("username", username);
 
             resp.sendRedirect("InicioLoged.html");
+
+
 
         } else {
 

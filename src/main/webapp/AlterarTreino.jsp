@@ -8,18 +8,15 @@
 
   <meta charset="UTF-8">
 
-
-
   <header>
       <div class="menu-content">
-
 
           <img src="Imagem/ff.png"> <h1 class="logo">
            GYM-CENTER</h1>
 
               <nav class="list-itens">
                   <li><a href="index.jsp">Home</a></li>
-                  <li><a href="CadastroTreino.jsp">CadastroTreino</a></li>
+                  <li><form action="/create-treino" method="post"><button type="submit">IR PARA CADASTRAR TREINO</button></form></li>
                   <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                   <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                   <li><img src="Imagem/peso.png"></i></a></li>
@@ -27,13 +24,12 @@
           </nav>
       </div>
   </header>
+
   <body>
 <div class="h1">
-<h1>TREINOS CADASTRADOS</h1>
-
+<h1>TREINOS DOS DIAS</h1>
 </div>
   <table id="tabela">
-
   <thead>
   		<tr>
   				<th>Exercicio</th>
@@ -55,18 +51,15 @@
        <td><text value="${TreinosCad.diaSemana}">${TreinosCad.diaSemana}</text></td>
 
 <td>
-<form action="/deleteTreino" method="post">
+                    <form action="/deleteTreino" method="post">
                     <input type="hidden" id="id" name="id" value="${TreinosCad.id}">
                     <button class= "btn-primary" type="submit">Delete</button>
                 </form>
                 </td>
                 </tr>
-
  </c:forEach>
 </tbody>
-
 </table>
-
 
 <div class="frases">
 <h1>Gerencie seus treinos a qualquer momento</h1>

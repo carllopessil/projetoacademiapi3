@@ -12,13 +12,16 @@
 <header>
     <div class="menu-content">
         <img src="Imagem/ff.png"> <h1 class="logo"> GYM-CENTER</h1>
-
             <nav class="list-itens">
                 <li><a href="index.jsp">Home</a></li>
-                <li><a href="AlterarTreino.jsp">Todos os treinos</a></li>
-                <li><a href="#">Sobre</a></li>
+
+
+                <form action="/buscatreinos123" method="get">
+                    <button type="submit">Deletar treinos</button>
+                </form>
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                   <li><img src="Imagem/peso.png"></i></a></li>
+                  <li><a href="AtualizaCadastro.jsp">Atualiza cadastro (GUSTAVO)</a></li>
             </ul>
         </nav>
     </div>
@@ -33,14 +36,12 @@
             <c:forEach var="car" items="${cars}">
                 <option  value="${car.exercicio}">${car.exercicio}</option>
             </c:forEach>
-
         </select>
 
         <label>Escolha a quantidade de repeticao :</label>
         <select class="custom-select" name="repeticao" id="repeticao" >
             <c:forEach var="car" items="${cars}">
                 <option value="${car.repeticao}">${car.repeticao}</option>
-
             </c:forEach>
         </select>
 
@@ -57,17 +58,21 @@
                         <option value="${car.diaSemana}">${car.diaSemana}</option>
                     </c:forEach>
                 </select>
-            <button class="btn btn-primary" type="submit" value="Submit">Register</button>
+                <li>
+                </li>
 
-    </form>
+    <button class="btn-primary" type="submit" value="Submit">Register</button>
+
+
+
+</form>
 
     <div class="second-text">
     <h1>O corpo alcanca o que a mente acredita</h1>
-
-    </div>
-
-
-
 </div>
+
+
+
+
 </body>
 </html>

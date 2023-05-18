@@ -112,8 +112,9 @@ font-family: helvetica;
 color: white;
 border-color: green;
 
-
 }
+
+
 .id{
 color: white;
 
@@ -123,6 +124,9 @@ color: white;
   background-color: red;
   border-color: red;
   padding: 3px 10px 3px 10px;
+
+
+
 
 }
 
@@ -193,4 +197,6 @@ font-size: 1em;
     text-transform: uppercase;
      text-align:center
 }
+
+
 
