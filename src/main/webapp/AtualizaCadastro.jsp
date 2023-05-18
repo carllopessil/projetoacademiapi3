@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    
     <link href="css/styles-cadastroCliente.css" rel="stylesheet" type="text/css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,3 +82,4 @@
 </body>
 
 </html>
+<script src="\js\scripCadastro.js"></script>
