@@ -45,7 +45,6 @@ public class CreateTreinoServlet extends HttpServlet {
         List<CadastroTreino> cars = new CadastroTreinoDao().findAllTreino();
         request.setAttribute("cars", cars);
 
-
         new CadastroTreinoDao().createTreino(treino);
         request.getRequestDispatcher("CadastroTreino.jsp").forward(request, response);
 

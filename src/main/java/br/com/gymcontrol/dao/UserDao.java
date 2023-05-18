@@ -52,4 +52,37 @@ public class UserDao {
 
     }
 
+    public String getcpf(User user) {
+        String SQL = "SELECT CPF FROM GYMUSER WHERE EMAIL = ?";
+
+
+        try {
+
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+
+            System.out.println("success in database connection");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            preparedStatement.setString(1, user.getUsername());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            System.out.println("success in select username");
+
+            String cpf= .getString("resultSetRows")
+
+
+
+            connection.close();
+
+            return cpf;
+
+        } catch (Exception e) {
+
+            System.out.println("Error: " + e.getMessage());
+
+            return null;
+
+        }
+    }
 }

@@ -16,6 +16,9 @@ public class DeleteTreinoServlet extends HttpServlet{
             String cadId = req.getParameter("id");
             System.out.println(cadId);
 
+            //comando que pega o cpf da sessão do usuario logado
+            String CFPFtest =(String) req.getSession().getAttribute("cpf");
+
             new CadastroTreinoDao().deleteTreinoById(cadId);
 
             resp.sendRedirect("/buscatreinos123");

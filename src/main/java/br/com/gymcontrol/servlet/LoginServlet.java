@@ -35,12 +35,17 @@ public class LoginServlet extends HttpServlet {
         boolean isValidUser = new UserDao().verifyCredentials(user);
 
         if (isValidUser) {
+            String cpf = new UserDao().getcpf(user);
+            req.getSession().setAttribute("cpf", cpf);
 
-            req.getSession().setAttribute("username", username);
+        if (isValidUser) {
 
+            String CFPFtest =(String) req.getSession().getAttribute("cpf");
             resp.sendRedirect("InicioLoged.html");
 
 
+
+            System.out.println(CFPFtest);
 
         } else {
 

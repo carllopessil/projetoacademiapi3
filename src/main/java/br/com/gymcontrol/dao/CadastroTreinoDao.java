@@ -40,6 +40,7 @@ public class CadastroTreinoDao {
             System.out.println("success in connection");
             JOptionPane.showMessageDialog(null, "Treino cadastrado");
 
+
             connection.close();
 
 
