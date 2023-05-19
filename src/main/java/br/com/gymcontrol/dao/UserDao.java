@@ -55,34 +55,56 @@ public class UserDao {
     public String getcpf(User user) {
         String SQL = "SELECT CPF FROM GYMUSER WHERE EMAIL = ?";
 
-
         try {
-
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
 
-            System.out.println("success in database connection");
-
+            System.out.println("sucesso em conectar no banco");
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
             preparedStatement.setString(1, user.getUsername());
-            ResultSet resultSet = preparedStatement.executeQuery();
 
-            System.out.println("success in select username");
+            ResultSet rs = preparedStatement.executeQuery();
 
-            String cpf= resultSet.getString("resultSetRows");
+            System.out.println("sucesso em buscar no banco");
 
-
+            String CPFFF = rs.getNString("CPF");
 
             connection.close();
 
-            return cpf;
-
         } catch (Exception e) {
-
-            System.out.println("Error: " + e.getMessage());
-
-            return null;
+            System.out.println("erro :" + e.getMessage());
 
         }
+        return null;
     }
 }
+///
+//        try {
+//
+//            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+//
+//            System.out.println("success in database connection");
+//
+//            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+//
+//            preparedStatement.setString(1, user.getUsername());
+//            ResultSet resultSet = preparedStatement.executeQuery();
+//
+//            System.out.println("success in select username");
+//
+//            String CPF= resultSet.getString("CPF");
+//
+//
+//
+//
+//            connection.close();
+//
+//            return CPF;
+//
+//        } catch (Exception e) {
+//
+//            System.out.println("Error: " + e.getMessage());
+//
+//            return null;
+//
+//
