@@ -15,9 +15,7 @@
             <nav class="list-itens">
                 <li><a href="index.jsp">Home</a></li>
 
-
-                <form action="/buscatreinos123" method="get">
-                    <button type="submit">Deletar treinos</button>
+                <form action="/buscatreinos123" method="get"><button class="btn-primary" type="submit">Deletar treinos</button>
                 </form>
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                   <li><img src="Imagem/peso.png"></i></a></li>
@@ -49,19 +47,17 @@
         <select class="custom-select" name="carga" id="carga" >
             <c:forEach var="car" items="${cars}">
                 <option value="${car.carga}">${car.carga}</option>
-
             </c:forEach>
         </select>
-                <label>Escolha a quantidade de carga:</label>
-                <select class="custom-select" name="diaSemana" id="diaSemana" >
-                    <c:forEach var="car" items="${cars}">
-                        <option value="${car.diaSemana}">${car.diaSemana}</option>
-                    </c:forEach>
-                </select>
-                <li>
-                </li>
+         <label>Escolha o dia da semana:</label>
+           <select class="custom-select" name="diaSemana" id="diaSemana" >
+             <c:forEach var="car" items="${cars}">
+               <option value="${car.diaSemana}">${car.diaSemana}</option>
+                 </c:forEach>
 
-    <button class="btn-primary" type="submit" value="Submit">Register</button>
+                </select>
+                    <button class="btn-primary" type="submit" value="Submit">Register</button>
+
 
 
 
@@ -73,6 +69,8 @@
 
 
 
+<h1>CPF do Usuário</h1>
+<p>O CPF do usuário logado é: <%= session.getAttribute("cpf") %></p>
 
 </body>
 </html>

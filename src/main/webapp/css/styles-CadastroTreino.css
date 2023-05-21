@@ -20,8 +20,6 @@ main {
     gap: 10px;
     color: white;
 
-
-
 }
 /*faz uma lista com o menu*/
 .menu-content {
@@ -33,15 +31,12 @@ font-size:17px;
     display: flex;
     justify-content: space-between;
    padding: 1rem 1rem;
-
-
-
-
 }
+
+
 label {
   display: block;
   margin-bottom:12px;
-
 }
 
 .second-text { /*A FRASE O CORPO ALCANÇA...-–>*/
@@ -49,7 +44,6 @@ label {
     color: rgb(165, 165, 165);
     text-transform: uppercase;
      text-align:center
-
 }
 
 
@@ -63,10 +57,8 @@ width: 100%;
     color: red;
     box-sizing: border-box;
     position: absolute;
-
-
-
 }
+
 .main-content {
     display: flex;
     flex-direction: column;
@@ -97,13 +89,14 @@ width: 100%;
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
-  vertical-align: middle;
   background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  text-align: center
+
 }
 .form {
 position: relative;
@@ -111,6 +104,11 @@ align: center;
 font-family: helvetica;
 color: white;
 border-color: green;
+font-size: 18;
+  margin-bottom: 10px;
+  font-family: Arial Bold;
+
+
 
 }
 
@@ -197,6 +195,7 @@ font-size: 1em;
     text-transform: uppercase;
      text-align:center
 }
+
 
 
 

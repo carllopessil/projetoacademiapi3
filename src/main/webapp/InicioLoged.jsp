@@ -99,5 +99,16 @@
     </div>
     <!-- Add more semana divs as needed -->
 </div>
+
+
+<h1>CPF do Usuário</h1>
+<p>O CPF do usuário logado é: <%= session.getAttribute("cpf") %></p>
+
 </body>
+
+
+<form action="/create-treino" method="post">
+    <button type="submit">IR PARA CADASTRAR TREINO</button>
+
+</form>
 </html>

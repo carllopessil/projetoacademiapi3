@@ -16,7 +16,7 @@
 
               <nav class="list-itens">
                   <li><a href="index.jsp">Home</a></li>
-                  <li><form action="/create-treino" method="post"><button type="submit">IR PARA CADASTRAR TREINO</button></form></li>
+                  <li><form action="/create-treino" method="post"><button class="btn-primary" type="submit">CADASTRAR TREINO</button></form></li>
                   <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                   <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                   <li><img src="Imagem/peso.png"></i></a></li>
@@ -31,11 +31,11 @@
 </div>
   <table id="tabela">
   <thead>
-  		<tr>
+  		<tr><th>Dia da semana</th>
   				<th>Exercicio</th>
   				<th>Repeticao</th>
   				<th>Carga</th>
-  				<th>Dia da semana</th>
+
   				<th>Apagar</th>
 
   			</tr>
@@ -44,26 +44,25 @@
 
 <c:forEach var="TreinosCad" items="${TreinosCad}">
 
-<tr>
+<tr>       <td><text value="${TreinosCad.diaSemana}">${TreinosCad.diaSemana}</text></td>
+
         <td><text value="${TreinosCad.exercicio}">${TreinosCad.exercicio}</text></td>
        <td><text value="${TreinosCad.repeticao}">${TreinosCad.repeticao}</text></td>
        <td><text value="${TreinosCad.carga}">${TreinosCad.carga}</text></td>
-       <td><text value="${TreinosCad.diaSemana}">${TreinosCad.diaSemana}</text></td>
 
 <td>
                     <form action="/deleteTreino" method="post">
                     <input type="hidden" id="id" name="id" value="${TreinosCad.id}">
                     <button class= "btn-primary" type="submit">Delete</button>
-                </form>
-                </td>
-                </tr>
- </c:forEach>
-</tbody>
+                    </form>
+                    </td>
+                    </tr>
+                    </c:forEach>
+        </tbody>
 </table>
 
 <div class="frases">
 <h1>Gerencie seus treinos a qualquer momento</h1>
-
 </div>
 
   </body>

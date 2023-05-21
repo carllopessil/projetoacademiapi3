@@ -31,21 +31,17 @@ public class LoginServlet extends HttpServlet {
 
 
         User user = new User(username, password);
+        UserDao userDao = new UserDao();
 
-        boolean isValidUser = new UserDao().verifyCredentials(user);
+
+        boolean isValidUser = userDao.verifyCredentials(user);
+
 
         if (isValidUser) {
-            String cpf = new UserDao().getcpf(user);
+            String cpf = userDao.getCpf(user);
             req.getSession().setAttribute("cpf", cpf);
-
-        if (isValidUser) {
-
-            String CFPFtest =(String) req.getSession().getAttribute("cpf");
-            resp.sendRedirect("InicioLoged.html");
-
-
-
-            System.out.println(CFPFtest);
+            System.out.println(cpf);
+            resp.sendRedirect("InicioLoged.jsp");
 
         } else {
 
@@ -59,5 +55,4 @@ public class LoginServlet extends HttpServlet {
     }
 
 
-}
 }
