@@ -4,6 +4,7 @@ import br.com.gymcontrol.model.CadastroTreino;
 import br.com.gymcontrol.model.TreinosCadastrados;
 
 
+import javax.servlet.http.HttpServletRequest;
 import javax.swing.*;
 import java.sql.*;
 import java.util.ArrayList;
@@ -17,40 +18,40 @@ public class CadastroTreinoDao {
 
     }
 
-    public void createTreino(CadastroTreino cadastroTreino) {
-        String SQL = "INSERT INTO TREINOSCADASTRO (EXERCICIO, REPETICAO, CARGA, DIASEMANA) VALUES (?, ?, ?, ?)";
-
+    public void createTreino(CadastroTreino cadastroTreino, HttpServletRequest request) {
+        String SQL = "INSERT INTO TREINOSCADASTRO (EXERCICIO, REPETICAO, CARGA, DIASEMANA, CPF) VALUES (?, ?, ?, ?, ?)";
 
         try {
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
             System.out.println("success in database connection");
+
+            // Obtém o CPF da sessão de login do objeto request
+            String cpf = (String) request.getSession().getAttribute("cpf");
+
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
-            preparedStatement.setString(1, cadastroTreino.getExercicio()); //1 = primeiro paramentro identificando na String SQL do ponto de interrogação
+            preparedStatement.setString(1, cadastroTreino.getExercicio());
             preparedStatement.setString(2, cadastroTreino.getRepeticao());
             preparedStatement.setString(3, cadastroTreino.getCarga());
             preparedStatement.setString(4, cadastroTreino.getDiaSemana());
+            preparedStatement.setString(5, cpf);
 
-            System.out.println(cadastroTreino.getExercicio());
             System.out.println(cadastroTreino.getExercicio());
             System.out.println(cadastroTreino.getRepeticao());
+            System.out.println(cadastroTreino.getCarga());
             System.out.println(cadastroTreino.getDiaSemana());
-
+            System.out.println(cpf);
 
             preparedStatement.execute();
             System.out.println("success in connection");
             JOptionPane.showMessageDialog(null, "Treino cadastrado");
 
-
             connection.close();
-
-
         } catch (Exception e) {
             System.out.println("fail in connection CADASTRO DO TREINO DO USUARIO");
             System.out.println(e.getMessage());
         }
-
-
     }
+
 
     public List<CadastroTreino> findAllTreino() {
 
@@ -167,8 +168,6 @@ public class CadastroTreinoDao {
 
         }
     }
-
-
 
 
     private static final String URL = "jdbc:h2:~/test";

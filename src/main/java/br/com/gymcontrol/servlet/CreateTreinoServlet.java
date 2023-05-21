@@ -19,9 +19,6 @@ public class CreateTreinoServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-
-
-
         CadastroTreino treino = new CadastroTreino();
 
         String exercicio = request.getParameter("exercicio");
@@ -32,11 +29,9 @@ public class CreateTreinoServlet extends HttpServlet {
         treino.setRepeticao(repeticao);
         System.out.println(repeticao);
 
-
         String carga = request.getParameter("carga");
         treino.setCarga(carga);
         System.out.println(carga);
-
 
         String diaSemana = request.getParameter("diaSemana");
         treino.setDiaSemana(diaSemana);
@@ -45,10 +40,7 @@ public class CreateTreinoServlet extends HttpServlet {
         List<CadastroTreino> cars = new CadastroTreinoDao().findAllTreino();
         request.setAttribute("cars", cars);
 
-        new CadastroTreinoDao().createTreino(treino);
+        new CadastroTreinoDao().createTreino(treino, request);
         request.getRequestDispatcher("CadastroTreino.jsp").forward(request, response);
-
-
     }
-
 }

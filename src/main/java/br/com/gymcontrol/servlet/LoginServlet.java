@@ -45,9 +45,6 @@ public class LoginServlet extends HttpServlet {
 
         } else {
 
-
-//            req.getRequestDispatcher("TelaPrincipal.jsp").forward(req, resp);
-
             resp.sendRedirect("/login#openModal");
 
         }
