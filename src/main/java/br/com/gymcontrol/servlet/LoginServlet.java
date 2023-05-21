@@ -55,20 +55,20 @@ public class LoginServlet extends HttpServlet {
             List<CadastroTreino> resultadosDomingo = null;
 
 
-            resultadosSegunda = CadastroTreinoDao.buscarDadosPorDiaSemana3("Segunda-Feira");
+            resultadosSegunda = CadastroTreinoDao.buscarDadosPorDiaSemana3("Segunda-Feira", cpf);
             System.out.println("teste" + resultadosSegunda.toString());
 
-            resultadosTerca = CadastroTreinoDao.buscarDadosPorDiaSemana3("Terça-Feira");
+            resultadosTerca = CadastroTreinoDao.buscarDadosPorDiaSemana3("Terça-Feira", cpf);
 
-            resultadosQuarta = CadastroTreinoDao.buscarDadosPorDiaSemana3("Quarta-Feira");
+            resultadosQuarta = CadastroTreinoDao.buscarDadosPorDiaSemana3("Quarta-Feira", cpf);
 
-            resultadosQuinta = CadastroTreinoDao.buscarDadosPorDiaSemana3("Quinta-Feira");
+            resultadosQuinta = CadastroTreinoDao.buscarDadosPorDiaSemana3("Quinta-Feira", cpf);
 
-            resultadosSexta = CadastroTreinoDao.buscarDadosPorDiaSemana3("Sexta-Feira");
+            resultadosSexta = CadastroTreinoDao.buscarDadosPorDiaSemana3("Sexta-Feira", cpf);
 
-            resultadosSabado = CadastroTreinoDao.buscarDadosPorDiaSemana3("Sabado");
+            resultadosSabado = CadastroTreinoDao.buscarDadosPorDiaSemana3("Sabado", cpf);
 
-            resultadosDomingo = CadastroTreinoDao.buscarDadosPorDiaSemana3("Domingo");
+            resultadosDomingo = CadastroTreinoDao.buscarDadosPorDiaSemana3("Domingo", cpf);
 
 
             req.setAttribute("resultadosSeg", resultadosSegunda);

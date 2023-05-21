@@ -207,13 +207,15 @@ public class CadastroTreinoDao {
         return resultados;
 
     }
-    public static List<CadastroTreino> buscarDadosPorDiaSemana3(String diaSemana) {
+    public static List<CadastroTreino> buscarDadosPorDiaSemana3(String diaSemana, String cpf) {
         List<CadastroTreino> resultados = new ArrayList<>();
         try (Connection conn = DriverManager.getConnection(URL, USUARIO, SENHA)) {
-            String query = "SELECT TOP 3 CARGA, EXERCICIO FROM TREINOSCADASTRO WHERE DIASEMANA = ?";
+            String query = "SELECT TOP 3 CARGA, EXERCICIO FROM TREINOSCADASTRO WHERE DIASEMANA = ? AND CPF = ?";
             PreparedStatement stmt = conn.prepareStatement(query);
             System.out.println("validando o select " + diaSemana);
             stmt.setString(1, diaSemana);
+            stmt.setString(2, cpf);
+
 
             ResultSet rs = stmt.executeQuery();
 
