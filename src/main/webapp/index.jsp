@@ -18,6 +18,9 @@
 </head>
 <body>
     <h1>Consulta</h1>
+
+<body>
+    <h1>Consulta</h1>
     <form action="MeuServlet" method="post">
         <button type="submit" name="dia" value="segunda">Segunda-feira</button>
 <button type="submit" name="dia" value="terca">Terça-feira</button>

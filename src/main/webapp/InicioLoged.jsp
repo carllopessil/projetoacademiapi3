@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
+
+    <script src="https://kit.fontawesome.com/3df637a2f2.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
+        <%@ page contentType="text/html; charset=UTF-8" %>
+          <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GYM-CENTER</title>
     <style>
@@ -32,28 +36,37 @@
             flex-wrap: wrap;
             justify-content: space-between;
             margin: 2rem;
+            display: inline-block;
         }
         .semana {
+
             background-color: #000;
             border-radius: 10px;
             color: #FFF;
-            margin-bottom: 1rem;
             padding: 1rem;
-            width: 280px;
+            width: 320px;
+            height: 240px;
+            position:relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 2rem;
+            display: inline-block;
         }
         .semana h2 {
+        text-align: center;
             color: red;
             font-size: 20px;
             font-weight: bold;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
         .semana p {
             color: blue;
             font-size: 25px;
             font-weight: bold;
-            margin: 0;
+            margin: 10px;
         }
-        button {
+        button{
             background-color: blue;
             border: none;
             border-radius: 5px;
@@ -61,6 +74,18 @@
             cursor: pointer;
             font-weight: bold;
             padding: 0.5rem 1rem;
+            margin-left: 28%;
+            position: relative;
+            margin-bottom: 1px;
+        }
+        .teste{
+        margin-left: 5%;
+        }
+        .cadas{
+        margin-left:44%
+        }
+        .ccc{
+            height: 30px;
         }
     </style>
 </head>
@@ -69,46 +94,120 @@
     <h1>GYM-CENTER</h1>
     <h1>CARLOS</h1>
 </header>
-<div class="container">
+<header class="ccc">
+<form  class="cadas" action="/create-treino" method="post">
+    <button type="submit">CADASTRAR TREINO</button>
+</form>
+</header>
+<div class="teste">
+
     <div class="semana">
         <h2>SEGUNDA</h2>
-        <p>3X Peck-Deck</p>
-        <p>3X Remada</p>
-        <p>4X Desenvolvimento</p>
-        <button>Treino Completo</button>
+        <c:forEach var="treinos" items="${resultadosSeg}">
+        <p>${treinos.carga}x     ${treinos.exercicio}</p>
+        </c:forEach>
+            <c:if test="${empty resultadosSeg}">
+                <p>Nenhum resultado encontrado.</p>
+            </c:if>
+
+       <form action="MeuServlet" method="post">
+            <button type="submit" name="dia" value="segunda">Treino Completo</button>
+       </form>
     </div>
-    <!-- Add more semana divs as needed -->
-</div>
-<div class="container">
     <div class="semana">
         <h2>TERÇA</h2>
-        <p>4X LEG PRESS</p>
-        <p>3X ABDUTORA</p>
-        <p>3X EXTENSORA</p>
-        <button>Treino Completo</button>
+         <c:forEach var="treinos" items="${resultadosTer}">
+                <p>${treinos.carga}x     ${treinos.exercicio}</p>
+                </c:forEach>
+                <c:if test="${empty resultadosSeg}">
+                                <p>Nenhum resultado encontrado.</p>
+                            </c:if>
+            <form action="MeuServlet" method="post">
+                <button type="submit" name="dia" value="terca">Treino Completo</button>
+        </form>
     </div>
-    <!-- Add more semana divs as needed -->
-</div>
-<div class="container">
+
     <div class="semana">
         <h2>QUARTA</h2>
-        <p>3X Peck-Deck</p>
-        <p>3X Remada</p>
-        <p>4X Desenvolvimento</p>
-        <button>Treino Completo</button>
+         <c:forEach var="treinos" items="${resultadosQua}">
+                <p>${treinos.carga}x     ${treinos.exercicio}</p>
+                </c:forEach>
+                <c:if test="${empty resultadosSeg}">
+                                <p>Nenhum resultado encontrado.</p>
+                            </c:if>
+       <form action="MeuServlet" method="post">
+                       <button type="submit" name="dia" value="quarta">Treino Completo</button>
+               </form>
     </div>
-    <!-- Add more semana divs as needed -->
+
+
+    <div class="semana">
+        <h2>QUINTA</h2>
+        <c:forEach var="treinos" items="${resultadosQui}">
+               <p>${treinos.carga}x     ${treinos.exercicio}</p>
+               </c:forEach>
+               <c:if test="${empty resultadosSeg}">
+                               <p>Nenhum resultado encontrado.</p>
+                           </c:if>
+       <form action="MeuServlet" method="post">
+                       <button type="submit" name="dia" value="quinta">Treino Completo</button>
+               </form>
+    </div>
+
 </div>
+<div class="teste">
 
+    <div class="semana">
+        <h2>SEXTA</h2>
+         <c:forEach var="treinos" items="${resultadosSex}">
+                <p>${treinos.carga}x ${treinos.exercicio}</p>
+                </c:forEach>
+                <c:if test="${empty resultadosSeg}">
+                                <p>Nenhum resultado encontrado.</p>
+                            </c:if>
+       <form action="MeuServlet" method="post">
+                       <button type="submit" name="dia" value="sexta">Treino Completo</button>
+               </form>
+    </div>
 
-<h1>CPF do Usuário</h1>
-<p>O CPF do usuário logado é: <%= session.getAttribute("cpf") %></p>
+    <div class="semana">
+        <h2>SABADO</h2>
+         <c:forEach var="treinos" items="${resultadosSab}">
+                <p>${treinos.carga}x ${treinos.exercicio}</p>
+                </c:forEach>
+                <c:if test="${empty resultadosSeg}">
+                                <p>Nenhum resultado encontrado.</p>
+                            </c:if>
+       <form action="MeuServlet" method="post">
+                       <button type="submit" name="dia" value="sabado">Treino Completo</button>
+               </form>
+    </div>
 
+    <div class="semana">
+        <h2>DOMINGO</h2>
+         <c:forEach var="treinos" items="${resultadosDom}">
+                <p>${treinos.carga}x ${treinos.exercicio}</p>
+                </c:forEach>
+                <c:if test="${empty resultadosSeg}">
+                                <p>Nenhum resultado encontrado.</p>
+                            </c:if>
+       <form action="MeuServlet" method="post">
+                       <button type="submit" name="dia" value="domingo">Treino Completo</button>
+               </form>
+    </div>
+
+     <div class="semana">
+            <h2>MES</h2>
+            <p>3X Peck-Deck</p>
+            <p>3X Remada</p>
+            <p>4X Desenvolvimento</p>
+           <form action="MeuServlet" method="post">
+                           <button type="submit" name="dia" value="domingo">Treino Completo</button>
+                   </form>
+        </div>
+</div>
 </body>
 
 
-<form action="/create-treino" method="post">
-    <button type="submit">IR PARA CADASTRAR TREINO</button>
 
-</form>
 </html>

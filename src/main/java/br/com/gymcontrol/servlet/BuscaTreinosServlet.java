@@ -35,8 +35,8 @@ public class BuscaTreinosServlet extends HttpServlet {
             request.setAttribute("resultados", resultados);
             request.getRequestDispatcher("pagina-de-resultado.jsp").forward(request, response);
         }
-
 }
+
 }
 
 

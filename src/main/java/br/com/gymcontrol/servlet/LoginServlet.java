@@ -1,6 +1,8 @@
 package br.com.gymcontrol.servlet;
 
+import br.com.gymcontrol.dao.CadastroTreinoDao;
 import br.com.gymcontrol.dao.UserDao;
+import br.com.gymcontrol.model.CadastroTreino;
 import br.com.gymcontrol.model.User;
 
 import javax.servlet.ServletException;
@@ -9,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
@@ -41,7 +44,42 @@ public class LoginServlet extends HttpServlet {
             String cpf = userDao.getCpf(user);
             req.getSession().setAttribute("cpf", cpf);
             System.out.println(cpf);
-            resp.sendRedirect("InicioLoged.jsp");
+
+
+            List<CadastroTreino> resultadosSegunda = null;
+            List<CadastroTreino> resultadosTerca = null;
+            List<CadastroTreino> resultadosQuarta = null;
+            List<CadastroTreino> resultadosQuinta = null;
+            List<CadastroTreino> resultadosSexta = null;
+            List<CadastroTreino> resultadosSabado = null;
+            List<CadastroTreino> resultadosDomingo = null;
+
+
+            resultadosSegunda = CadastroTreinoDao.buscarDadosPorDiaSemana3("Segunda-Feira");
+            System.out.println("teste" + resultadosSegunda.toString());
+
+            resultadosTerca = CadastroTreinoDao.buscarDadosPorDiaSemana3("Terça-Feira");
+
+            resultadosQuarta = CadastroTreinoDao.buscarDadosPorDiaSemana3("Quarta-Feira");
+
+            resultadosQuinta = CadastroTreinoDao.buscarDadosPorDiaSemana3("Quinta-Feira");
+
+            resultadosSexta = CadastroTreinoDao.buscarDadosPorDiaSemana3("Sexta-Feira");
+
+            resultadosSabado = CadastroTreinoDao.buscarDadosPorDiaSemana3("Sabado");
+
+            resultadosDomingo = CadastroTreinoDao.buscarDadosPorDiaSemana3("Domingo");
+
+
+            req.setAttribute("resultadosSeg", resultadosSegunda);
+            req.setAttribute("resultadosTer", resultadosTerca);
+            req.setAttribute("resultadosQua", resultadosQuarta);
+            req.setAttribute("resultadosQui", resultadosQuinta);
+            req.setAttribute("resultadosSex", resultadosSexta);
+            req.setAttribute("resultadosSab", resultadosSabado);
+            req.setAttribute("resultadosDom", resultadosDomingo);
+
+            req.getRequestDispatcher("InicioLoged.jsp").forward(req, resp);
 
         } else {
 

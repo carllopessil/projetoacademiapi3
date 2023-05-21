@@ -193,6 +193,7 @@ public class CadastroTreinoDao {
                 String carga = rs.getString("carga");
                 String diaSemana2 = rs.getString("diaSemana");
 
+                System.out.println(id+ exercicio+ repeticao+carga+diaSemana2);
                 CadastroTreino cadastroTreino = new CadastroTreino(id, exercicio, repeticao, carga, diaSemana2);
                 resultados.add(cadastroTreino);
             }
@@ -206,7 +207,35 @@ public class CadastroTreinoDao {
         return resultados;
 
     }
+    public static List<CadastroTreino> buscarDadosPorDiaSemana3(String diaSemana) {
+        List<CadastroTreino> resultados = new ArrayList<>();
+        try (Connection conn = DriverManager.getConnection(URL, USUARIO, SENHA)) {
+            String query = "SELECT TOP 3 CARGA, EXERCICIO FROM TREINOSCADASTRO WHERE DIASEMANA = ?";
+            PreparedStatement stmt = conn.prepareStatement(query);
+            System.out.println("validando o select " + diaSemana);
+            stmt.setString(1, diaSemana);
 
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+
+                String exercicio = rs.getString("exercicio");
+                String carga = rs.getString("carga");
+                System.out.println(exercicio);
+                System.out.println(exercicio+ carga);
+                CadastroTreino cadastroTreino = new CadastroTreino(exercicio, carga);
+                resultados.add(cadastroTreino);
+            }
+
+        } catch (SQLException e) {
+            System.out.println("não entrou" + diaSemana);
+            System.out.println("Error: " + e.getMessage());
+            e.printStackTrace();
+        }
+
+        return resultados;
+
+    }
 }
 
 

@@ -13,11 +13,11 @@
 </head>
 <body>
     <h1>Resultados da Busca:</h1>
-    <c:forEach var="treinos" items="${resultados}">
-        <p>exercicio: ${treinos.exercicio}</p>
-        <p>repeticao: ${treinos.repeticao}</p>
-         <p>Carga: ${exercicio.carga}</p>
-         <p>repeticao: ${treinos.diaSemana}</p>
+    <c:forEach var="Agua" items="${resultados}">
+        <p>${Agua.exercicio}</p>
+        <p>repeticao: ${Agua.repeticao}</p>
+        <p>Carga: ${Agua.carga}</p>
+        <p>repeticao: ${Agua.diaSemana}</p>
         <hr>
     </c:forEach>
     <c:if test="${empty resultados}">

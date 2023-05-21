@@ -44,6 +44,10 @@ public class CadastroTreino {
         this.carga = carga;
         this.diaSemana = diaSemana;
     }
+    public CadastroTreino(String exercicio, String carga) {
+        this.exercicio = exercicio;
+        this.carga = carga;
+    }
 
     public String getCarga() {
         return carga;
