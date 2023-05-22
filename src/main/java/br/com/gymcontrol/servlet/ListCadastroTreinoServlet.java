@@ -18,12 +18,8 @@ public class ListCadastroTreinoServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        List<TreinosCadastrados> TreinosCad = new CadastroTreinoDao().findAllCadastro();
+        List<TreinosCadastrados> TreinosCad = new CadastroTreinoDao().findAllCadastro(req);
         req.setAttribute("TreinosCad", TreinosCad);
         req.getRequestDispatcher("AlterarTreino.jsp").forward(req, resp);
-
     }
-
-
 }

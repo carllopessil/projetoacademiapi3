@@ -45,7 +45,6 @@
 <c:forEach var="TreinosCad" items="${TreinosCad}">
 
 <tr>       <td><text value="${TreinosCad.diaSemana}">${TreinosCad.diaSemana}</text></td>
-
         <td><text value="${TreinosCad.exercicio}">${TreinosCad.exercicio}</text></td>
        <td><text value="${TreinosCad.repeticao}">${TreinosCad.repeticao}</text></td>
        <td><text value="${TreinosCad.carga}">${TreinosCad.carga}</text></td>

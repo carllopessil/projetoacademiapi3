@@ -56,21 +56,15 @@
                  </c:forEach>
 
                 </select>
+                <br><br>
                     <button class="btn-primary" type="submit" value="Submit">Register</button>
-
-
-
-
 </form>
 
     <div class="second-text">
     <h1>O corpo alcanca o que a mente acredita</h1>
 </div>
 
-
-
-<h1>CPF do Usuário</h1>
-<p>O CPF do usuário logado é: <%= session.getAttribute("cpf") %></p>
+</div>
 
 </body>
 </html>

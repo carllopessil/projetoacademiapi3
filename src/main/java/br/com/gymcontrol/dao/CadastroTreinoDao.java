@@ -22,30 +22,40 @@ public class CadastroTreinoDao {
         String SQL = "INSERT INTO TREINOSCADASTRO (EXERCICIO, REPETICAO, CARGA, DIASEMANA, CPF) VALUES (?, ?, ?, ?, ?)";
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-            System.out.println("success in database connection");
-
-            // Obtém o CPF da sessão de login do objeto request
             String cpf = (String) request.getSession().getAttribute("cpf");
 
-            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
-            preparedStatement.setString(1, cadastroTreino.getExercicio());
-            preparedStatement.setString(2, cadastroTreino.getRepeticao());
-            preparedStatement.setString(3, cadastroTreino.getCarga());
-            preparedStatement.setString(4, cadastroTreino.getDiaSemana());
-            preparedStatement.setString(5, cpf);
+            if (cpf != null){
+                Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+                System.out.println("success in database connection");
 
-            System.out.println(cadastroTreino.getExercicio());
-            System.out.println(cadastroTreino.getRepeticao());
-            System.out.println(cadastroTreino.getCarga());
-            System.out.println(cadastroTreino.getDiaSemana());
-            System.out.println(cpf);
+                // Obtém o CPF da sessão de login do objeto request
 
-            preparedStatement.execute();
-            System.out.println("success in connection");
-            JOptionPane.showMessageDialog(null, "Treino cadastrado");
+                PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+                preparedStatement.setString(1, cadastroTreino.getExercicio());
+                preparedStatement.setString(2, cadastroTreino.getRepeticao());
+                preparedStatement.setString(3, cadastroTreino.getCarga());
+                preparedStatement.setString(4, cadastroTreino.getDiaSemana());
+                preparedStatement.setString(5, cpf);
 
-            connection.close();
+                System.out.println(cadastroTreino.getExercicio());
+                System.out.println(cadastroTreino.getRepeticao());
+                System.out.println(cadastroTreino.getCarga());
+                System.out.println(cadastroTreino.getDiaSemana());
+                System.out.println(cpf);
+
+                preparedStatement.execute();
+                System.out.println("success in connection");
+
+                connection.close();
+                JOptionPane.showMessageDialog(null, "Treino cadastrado");
+
+
+            } else {
+                System.out.println("VOLTA PARA A TELA DE LOGIN");
+                JOptionPane.showMessageDialog(null, "Entre com seu login");
+
+            }
+
         } catch (Exception e) {
             System.out.println("fail in connection CADASTRO DO TREINO DO USUARIO");
             System.out.println(e.getMessage());
@@ -125,17 +135,18 @@ public class CadastroTreinoDao {
     }
 
 
-    public List<TreinosCadastrados> findAllCadastro() {
-
-        String SQL = "SELECT * FROM TREINOSCADASTRO";
+    public List<TreinosCadastrados> findAllCadastro(HttpServletRequest request) {
+        String SQL = "SELECT * FROM TREINOSCADASTRO WHERE CPF = ?";
 
         try {
-
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-
             System.out.println("success in database connection");
 
+            // Obtém o CPF da sessão de login do objeto request
+            String cpf = (String) request.getSession().getAttribute("cpf");
+
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setString(1, cpf);
 
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -149,9 +160,7 @@ public class CadastroTreinoDao {
                 String carDiaSemana = resultSet.getString("diaSemana");
 
                 TreinosCadastrados treino = new TreinosCadastrados(carId, carExercicio, carRepeticao, carCarga, carDiaSemana);
-
                 cars.add(treino);
-
             }
 
             System.out.println("success in select * TREINO");
@@ -159,15 +168,12 @@ public class CadastroTreinoDao {
             connection.close();
 
             return cars;
-
         } catch (Exception e) {
-
             System.out.println("fail in database connection no select");
-
             return Collections.emptyList();
-
         }
     }
+
 
 
     private static final String URL = "jdbc:h2:~/test";
@@ -182,6 +188,7 @@ public class CadastroTreinoDao {
             PreparedStatement stmt = conn.prepareStatement(query);
             System.out.println("validando o select");
             stmt.setString(1, diaSemana);
+
 
             ResultSet rs = stmt.executeQuery();
 

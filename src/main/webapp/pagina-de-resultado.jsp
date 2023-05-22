@@ -14,10 +14,10 @@
 <body>
     <h1>Resultados da Busca:</h1>
     <c:forEach var="Agua" items="${resultados}">
-        <p>${Agua.exercicio}</p>
+        <p>Exercicio: ${Agua.exercicio}</p>
         <p>repeticao: ${Agua.repeticao}</p>
         <p>Carga: ${Agua.carga}</p>
-        <p>repeticao: ${Agua.diaSemana}</p>
+        <p>Dia da semana: ${Agua.diaSemana}</p>
         <hr>
     </c:forEach>
     <c:if test="${empty resultados}">
