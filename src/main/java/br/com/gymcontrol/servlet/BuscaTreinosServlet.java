@@ -19,16 +19,21 @@ public class BuscaTreinosServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String diaSemana = request.getParameter("dia");
+        String cpf = (String) request.getSession().getAttribute("cpf");
 
+        if (cpf == null) {
+            response.sendRedirect("TelaPrincipal.jsp"); // Redireciona para a página de login
+            return; // Encerra o processamento do servlet
+        }
         if (diaSemana != null) {
             List<CadastroTreino> resultados = null;
 
             if (diaSemana.equals("segunda")) {
-                resultados = CadastroTreinoDao.buscarDadosPorDiaSemana("Segunda-Feira");
+                resultados = CadastroTreinoDao.buscarDadosPorDiaSemana("Segunda-Feira", cpf);
             } else if (diaSemana.equals("terca")) {
-                resultados = CadastroTreinoDao.buscarDadosPorDiaSemana("Terça-Feira");
+                resultados = CadastroTreinoDao.buscarDadosPorDiaSemana("Terça-Feira", cpf);
             } else if (diaSemana.equals("quarta")) {
-                resultados = CadastroTreinoDao.buscarDadosPorDiaSemana("Quarta-Feira");
+                resultados = CadastroTreinoDao.buscarDadosPorDiaSemana("Quarta-Feira", cpf);
             }
 
 

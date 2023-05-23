@@ -174,46 +174,42 @@ public class CadastroTreinoDao {
         }
     }
 
-
-
     private static final String URL = "jdbc:h2:~/test";
     private static final String USUARIO = "sa";
     private static final String SENHA = "sa";
 
-    public static List<CadastroTreino> buscarDadosPorDiaSemana(String diaSemana) {
+    public static List<CadastroTreino> buscarDadosPorDiaSemana(String diaSemana, String cpf) {
         List<CadastroTreino> resultados = new ArrayList<>();
 
-        try (Connection conn = DriverManager.getConnection(URL, USUARIO, SENHA)) {
-            String query = "SELECT * FROM TREINOSCADASTRO WHERE diaSemana = ?";
+        try (Connection conn = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa")) {
+            String query = "SELECT * FROM TREINOSCADASTRO WHERE diaSemana = ? AND cpf = ?";
             PreparedStatement stmt = conn.prepareStatement(query);
             System.out.println("validando o select");
             stmt.setString(1, diaSemana);
+            stmt.setString(2, cpf);
 
 
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
-
                 String id = rs.getString("id");
                 String exercicio = rs.getString("exercicio");
                 String repeticao = rs.getString("repeticao");
                 String carga = rs.getString("carga");
                 String diaSemana2 = rs.getString("diaSemana");
 
-                System.out.println(id+ exercicio+ repeticao+carga+diaSemana2);
+                System.out.println(id + exercicio + repeticao + carga + diaSemana2);
                 CadastroTreino cadastroTreino = new CadastroTreino(id, exercicio, repeticao, carga, diaSemana2);
                 resultados.add(cadastroTreino);
             }
-
         } catch (SQLException e) {
-            System.out.println("não entrou");
-
+            System.out.println("Erro ao conectar ao banco de dados!");
             e.printStackTrace();
         }
 
         return resultados;
-
     }
+
     public static List<CadastroTreino> buscarDadosPorDiaSemana3(String diaSemana, String cpf) {
         List<CadastroTreino> resultados = new ArrayList<>();
         try (Connection conn = DriverManager.getConnection(URL, USUARIO, SENHA)) {
