@@ -24,13 +24,25 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     </div>
     <form action="/senac" method="post" id="form" class="form">
         <div class="form-control">
-            <label for="name">Nome de usuário</label>
+            <label for="name">Nome</label>
             <input
                     required="required"
                     name="name"
                     type="text"
                     id="name"
-                    placeholder="Digite seu nome de usuário"
+                    placeholder="Digite seu nome"
+            />
+            <small>Mensagem de erro</small>
+        </div>
+        <div class="form-control">
+            <label for="Sobrenome">sobrenome</label>
+
+            <input
+                    required="required"
+                    name="sobrenome"
+                    type="text"
+                    id="sobrenome"
+                    placeholder="Digite seu sobrenome"
             />
             <small>Mensagem de erro</small>
         </div>

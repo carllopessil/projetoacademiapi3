@@ -24,6 +24,10 @@ public class CreateGymServlet extends HttpServlet {
         user.setName(name);
         System.out.println(name);
 
+        String sobrenome = request.getParameter("sobrenome");
+        user.setSobrenome(sobrenome);
+        System.out.println(sobrenome);
+
         String Sexo = request.getParameter("sexo");
         user.setSexo(Sexo);
         System.out.println(Sexo);

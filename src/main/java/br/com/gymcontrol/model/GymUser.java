@@ -7,6 +7,9 @@ public class GymUser {
     private String dateBirth;
     private String email;
     private String senha;
+    private String sobrenome;
+
+
 
     private String cpf;
 
@@ -52,6 +55,13 @@ public class GymUser {
 
     public String getName() {
         return name;
+    }
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
     }
 
     public void setName(String name) {
