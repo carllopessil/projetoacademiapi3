@@ -54,6 +54,7 @@ public class CadastroTreinoDao {
                 System.out.println("VOLTA PARA A TELA DE LOGIN");
                 JOptionPane.showMessageDialog(null, "Entre com seu login");
 
+
             }
 
         } catch (Exception e) {
@@ -61,6 +62,9 @@ public class CadastroTreinoDao {
             System.out.println(e.getMessage());
         }
     }
+
+
+
 
 
     public List<CadastroTreino> findAllTreino() {
