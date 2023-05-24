@@ -46,6 +46,7 @@ public class LoginServlet extends HttpServlet {
             System.out.println(cpf);
 
 
+
             List<CadastroTreino> resultadosSegunda = null;
             List<CadastroTreino> resultadosTerca = null;
             List<CadastroTreino> resultadosQuarta = null;
@@ -53,6 +54,10 @@ public class LoginServlet extends HttpServlet {
             List<CadastroTreino> resultadosSexta = null;
             List<CadastroTreino> resultadosSabado = null;
             List<CadastroTreino> resultadosDomingo = null;
+
+
+            String nome = UserDao.PegaNome(req);
+            System.out.println(nome);
 
 
             resultadosSegunda = CadastroTreinoDao.buscarDadosPorDiaSemana3("Segunda-Feira", cpf);
@@ -70,7 +75,7 @@ public class LoginServlet extends HttpServlet {
 
             resultadosDomingo = CadastroTreinoDao.buscarDadosPorDiaSemana3("Domingo", cpf);
 
-
+            req.setAttribute("nome", nome);
             req.setAttribute("resultadosSeg", resultadosSegunda);
             req.setAttribute("resultadosTer", resultadosTerca);
             req.setAttribute("resultadosQua", resultadosQuarta);
@@ -78,6 +83,7 @@ public class LoginServlet extends HttpServlet {
             req.setAttribute("resultadosSex", resultadosSexta);
             req.setAttribute("resultadosSab", resultadosSabado);
             req.setAttribute("resultadosDom", resultadosDomingo);
+
 
             req.getRequestDispatcher("InicioLoged.jsp").forward(req, resp);
 

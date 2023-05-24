@@ -90,11 +90,12 @@
     </style>
 </head>
 <body>
-<header>
+<header Var="nome" items="nome">
     <h1>GYM-CENTER</h1>
-    <h1>CARLOS</h1>
+    <h1>${nome}</h1>
 </header>
 <header class="ccc">
+
 <form  class="cadas" action="/create-treino" method="post">
     <button type="submit">CADASTRAR TREINO</button>
 </form>

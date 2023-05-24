@@ -2,6 +2,7 @@ package br.com.gymcontrol.dao;
 
 import br.com.gymcontrol.model.User;
 
+import javax.servlet.http.HttpServletRequest;
 import java.sql.*;
 
 public class UserDao {
@@ -53,6 +54,28 @@ public class UserDao {
         }
 
         return cpf;
+    }
+    public static String PegaNome(HttpServletRequest request) {
+        String Name = null;
+
+        try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD)) {
+            String cpf = (String) request.getSession().getAttribute("cpf");
+            String sql = "SELECT NAME FROM GYMUSER WHERE CPF = ? ";
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setString(1, cpf);
+
+
+                try (ResultSet resultSet = statement.executeQuery()) {
+                    if (resultSet.next()) {
+                        Name = resultSet.getString("NAME");
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return Name;
     }
 }
 ///
