@@ -15,7 +15,7 @@ public class AtualizaCadastroServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String userId = request.getParameter("id");
+
 
         String name = request.getParameter("name");
         GymUser user = new GymUser();
@@ -35,7 +35,8 @@ public class AtualizaCadastroServlet extends HttpServlet{
         System.out.println(Email);
 
 
-        new GymUserDao().GymUser(user);
+
+        new GymUserDao().UpdateUser(user, request);
         request.getRequestDispatcher("AtualizaCadastroServlet.jsp").forward(request, response);
 
     }

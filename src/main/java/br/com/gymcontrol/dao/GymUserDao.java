@@ -2,6 +2,7 @@ package br.com.gymcontrol.dao;
 
 import br.com.gymcontrol.model.GymUser;
 
+import javax.servlet.http.HttpServletRequest;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -33,9 +34,12 @@ public class GymUserDao {
 
         }
 
-        public void UpdateUser(GymUser gymUser){
-         String SQL = "UPDATE GYMUSER (NAME, SEXO, DATEBIRTH, EMAIL) = ?,?,?,?; WHERE ID=?";
+        public void UpdateUser(GymUser gymUser, HttpServletRequest request){
+         String SQL = "UPDATE GYMUSER SET NAME=?, SEXO = ?, DATEBITH=?, EMAIL = ? WHERE CPF=? ";
          try{
+             String cpf = (String) request.getSession().getAttribute("cpf");
+
+             if (cpf != null){
              Connection connection = DriverManager.getConnection("jdbc:h2:~/test","sa","sa");
              System.out.println("success in connection");
              PreparedStatement preparedStatement = connection.prepareStatement(SQL);
@@ -47,7 +51,7 @@ public class GymUserDao {
 
              connection.close();
 
-
+             }
          }catch (Exception e ){
              System.out.println("deu ruim na conexão");
 
