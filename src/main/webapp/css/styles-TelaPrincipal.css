@@ -77,7 +77,8 @@ body{
     }
 
 
-}.modalDialog {
+}
+.modalDialog {
    position: fixed;
    font-family: Arial, Helvetica, sans-serif;
    top: 0;

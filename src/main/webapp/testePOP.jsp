@@ -53,16 +53,10 @@
     </style>
 </head>
 <body>
-    <div class="usuario">
-        <span>Usuário</span>
-        <div class="usuario-popup">
-        <a href="editarCadastro.html">Editar Cadastro</a>
-        <li><form action="/atualiza" method="post"><button class="btn-primary" type="submit">Editar TREINO</button></form></li>
-        <li><form action="/create-treino" method="post"><button class="btn-primary" type="submit">Editar TREINO</button></form></li>
-        <li><form action="/atualiza" method="post"><button class="btn-primary" type="submit">CADASTRAR TREINO</button></form></li>
+     <form action="/logout" method="Get">
 
+     <button type="submit" >Logout</button>
 
-        </div>
-    </div>
+                 </form>
 </body>
 </html>
