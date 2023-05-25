@@ -2,6 +2,7 @@ package br.com.gymcontrol.servlet;
 
 import br.com.gymcontrol.dao.CadastroTreinoDao;
 import br.com.gymcontrol.dao.GymUserDao;
+import br.com.gymcontrol.dao.UserDao;
 import br.com.gymcontrol.model.CadastroTreino;
 import br.com.gymcontrol.model.GymUser;
 
@@ -40,7 +41,11 @@ public class CreateTreinoServlet extends HttpServlet {
         List<CadastroTreino> cars = new CadastroTreinoDao().findAllTreino();
         request.setAttribute("cars", cars);
 
+        String nome = UserDao.PegaNome(request);
+        request.setAttribute("nome", nome);
+
         new CadastroTreinoDao().createTreino(treino, request);
         request.getRequestDispatcher("CadastroTreino.jsp").forward(request, response);
+
     }
 }

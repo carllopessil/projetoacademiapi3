@@ -35,7 +35,6 @@
   				<th>Exercicio</th>
   				<th>Repeticao</th>
   				<th>Carga</th>
-
   				<th>Apagar</th>
 
   			</tr>
@@ -48,7 +47,6 @@
         <td><text value="${TreinosCad.exercicio}">${TreinosCad.exercicio}</text></td>
        <td><text value="${TreinosCad.repeticao}">${TreinosCad.repeticao}</text></td>
        <td><text value="${TreinosCad.carga}">${TreinosCad.carga}</text></td>
-
 <td>
                     <form action="/deleteTreino" method="post">
                     <input type="hidden" id="id" name="id" value="${TreinosCad.id}">

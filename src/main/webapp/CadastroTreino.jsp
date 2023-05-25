@@ -14,17 +14,30 @@
         <img src="Imagem/ff.png"> <h1 class="logo"> GYM-CENTER</h1>
             <nav class="list-itens">
                 <li><a href="index.jsp">Home</a></li>
-
-                <form action="/buscatreinos123" method="get"><button class="btn-primary" type="submit">Deletar treinos</button>
-                </form>
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><img src="Imagem/peso.png"></i></a></li>
-                  <li><a href="AtualizaCadastro.jsp">Atualiza cadastro (GUSTAVO)</a></li>
-            </ul>
+                <li><img src="Imagem/peso.png"></i></a></li>
+                </form>
+
+
         </nav>
+        <div class="usuario">
+                   <span>Usuário</span>
+                   <div class="usuario-popup2">
+                   <a href="editarCadastro.html">Editar Cadastro</a>
+                   <li><form action="/atualiza" method="post"><button class="btn-primary2" type="submit">Editar TREINO</button></form></li>
+                   <li><form action="/create-treino" method="post"><button class="btn-primary2" type="submit">Editar TREINO</button></form></li>
+                   <li><form action="/atualiza" method="post"><button class="btn-primary2" type="submit">CADASTRAR TREINO</button></form></li>
+                     </div>
+                       </div>
+
     </div>
+     <div Var="nome" items="nome">
+     <h1>${nome}</h1>
+     </div>
+
 </header>
 <body>
+
 
 <div>
     <form class="form" style="text-align: center" action="/create-treino" method="post">
