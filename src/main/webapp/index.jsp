@@ -29,6 +29,14 @@
 </form>
 
 
+<form action="/atualizaCadastroUsuario" method="post">
+<button type="submit" name="enviar">atualizar cadastro<//button>
+</form>
+
+<div var= "nome" items = "NomeUsuario">
+                <h1>${nome}</h1>
+</div>
+
 <a href="testePOP.jsp">Usuário</a>
 
 </body>

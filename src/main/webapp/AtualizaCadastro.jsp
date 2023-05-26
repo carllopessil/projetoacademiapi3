@@ -2,11 +2,12 @@
 
 <html>
 <head>
-    
+
     <link href="css/styles-cadastroCliente.css" rel="stylesheet" type="text/css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     <title>Atualizar Conta</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,6 +32,18 @@
             <small>Mensagem de erro</small>
         </div>
 
+            <div class="form-control">
+            <label for="sobrenome">Email</label>
+
+            <input
+                    required="required"
+                    name="sobrenome"
+                    type="text"
+                    id="sobrenome"
+                    placeholder="sobrenome"
+            />
+            <small>Mensagem de erro</small>
+        </div>
         <div class="form-control">
             <div>
                 <label for = "sexo">Sexo</label>
@@ -73,12 +86,30 @@
             <small>Mensagem de erro</small>
         </div>
 
+        <div class="form-control">
+                    <label for="senha">senha</label>
+
+                    <input
+                            required="required"
+                            name="senha"
+                            type="password"
+                            id="senha"
+                            placeholder="Digite sua senha"
+                    />
+                    <small>Mensagem de erro</small>
+                </div>
 
 
-        <a href="TelaPrincipal.html"></a> <button type="submit">Atualizar</button>
+
+        <button type="submit">Atualizar</button>
     </form>
 
 </div>
+<div var= "nome" items = "Sexo">
+                <h1></h1>
+                <h2>aaaaaaaaaa${nome}aaaaaaaaa</h2>
+</div>
+
 </body>
 
 </html>

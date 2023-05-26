@@ -100,6 +100,10 @@
     <button type="submit">CADASTRAR TREINO</button>
 </form>
 </header>
+<form action="/atualizaCadastroUsuario" method="post">
+<button type="submit" name="enviar">atualizar cadastro<//button>
+</form>
+
 <div class="teste">
 
     <div class="semana">
