@@ -34,8 +34,19 @@ public class BuscaTreinosServlet extends HttpServlet {
                 resultados = CadastroTreinoDao.buscarDadosPorDiaSemana("Terça-Feira", cpf);
             } else if (diaSemana.equals("quarta")) {
                 resultados = CadastroTreinoDao.buscarDadosPorDiaSemana("Quarta-Feira", cpf);
-            }
 
+        } else if (diaSemana.equals("quinta")) {
+            resultados = CadastroTreinoDao.buscarDadosPorDiaSemana("Quinta-Feira", cpf);
+
+        } else if (diaSemana.equals("sexta")) {
+            resultados = CadastroTreinoDao.buscarDadosPorDiaSemana("Sexta-Feira", cpf);
+
+        } else if (diaSemana.equals("sabado")) {
+            resultados = CadastroTreinoDao.buscarDadosPorDiaSemana("Sabado", cpf);
+
+        } else if (diaSemana.equals("domingo")) {
+            resultados = CadastroTreinoDao.buscarDadosPorDiaSemana("Domingo", cpf);
+        }
 
             request.setAttribute("resultados", resultados);
             request.getRequestDispatcher("pagina-de-resultado.jsp").forward(request, response);

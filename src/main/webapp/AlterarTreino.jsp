@@ -17,11 +17,24 @@
               <nav class="list-itens">
                   <li><a href="index.jsp">Home</a></li>
                   <li><form action="/create-treino" method="post"><button class="btn-primary" type="submit">CADASTRAR TREINO</button></form></li>
-                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                  <li><img src="Imagem/peso.png"></i></a></li>
               </ul>
           </nav>
+          <div class="usuario-dropdown">
+                      <div class="dropdown-toggle">
+                      ${nome} <a href="/atualizaCadastroUsuario"><img src="Imagem/usuario.png" >
+                      </a>
+                      <a href="InicioLoged.jsp"><img src="Imagem/peso.png" >
+                          <div class="dropdown-menu">
+                              <a href="/logout" class="logout-link">Logout</a>
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
+          </header>
+
+
+
       </div>
   </header>
 

@@ -1,5 +1,7 @@
 package br.com.gymcontrol.servlet;
 
+import br.com.gymcontrol.dao.UserDao;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,6 +18,9 @@ import java.io.IOException;
             String treinoExercicio = request.getParameter("treino-exercicio");
 
             System.out.println(treinoExercicio);
+
+            String nome = UserDao.PegaNome(request);
+            request.setAttribute("nome", nome);
 
             request.getRequestDispatcher("index.html").forward(request, response);
 

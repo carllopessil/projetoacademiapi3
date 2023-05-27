@@ -1,4 +1,5 @@
 <html>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
     <meta charset="UTF-8">
@@ -11,32 +12,29 @@
 
 <header>
     <div class="menu-content">
-        <img src="Imagem/ff.png"> <h1 class="logo"> GYM-CENTER</h1>
-            <nav class="list-itens">
-                <li><a href="index.jsp">Home</a></li>
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><img src="Imagem/peso.png"></i></a></li>
-                </form>
+        <img src="Imagem/teste.png"> <h1 class="logo"> GYM-CENTER</h1>
+        <nav class="list-itens">
+            <li><a href="index.jsp">Home</a></li>
+            <li><form action="/buscatreinos123" method="get"><button class="btn-primary" type="submit">DELETAR TREINOS</button></form></li>
+      </nav>
+        <div class="usuario-dropdown">
+            <div class="dropdown-toggle">
+            ${nome} <a href="/atualizaCadastroUsuario"><img src="Imagem/usuario.png" >
+            </a>
+            <a href="InicioLoged.jsp"><img src="Imagem/peso.png" >
+                <div class="dropdown-menu">
+                    <a href="/logout" class="logout-link">Logout</a>
+                </div>
 
-
-        </nav>
-        <div class="usuario">
-                   <span>Usuário</span>
-                   <div class="usuario-popup2">
-                   <a href="editarCadastro.html">Editar Cadastro</a>
-                   <li><form action="/atualiza" method="post"><button class="btn-primary2" type="submit">Editar TREINO</button></form></li>
-                   <li><form action="/create-treino" method="post"><button class="btn-primary2" type="submit">Editar TREINO</button></form></li>
-                   <li><form action="/atualiza" method="post"><button class="btn-primary2" type="submit">CADASTRAR TREINO</button></form></li>
-                     </div>
-                       </div>
-
+            </div>
+        </div>
     </div>
-     <div Var="nome" items="nome">
-     <h1>${nome}</h1>
-     </div>
-
 </header>
 <body>
+<%-- <div Var="nome" items="nome">
+         <h1>${nome}</h1>
+           </div> --%>
+
 
 
 <div>

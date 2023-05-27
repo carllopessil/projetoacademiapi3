@@ -1,6 +1,7 @@
 package br.com.gymcontrol.servlet;
 
 import br.com.gymcontrol.dao.CadastroTreinoDao;
+import br.com.gymcontrol.dao.UserDao;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,6 +19,8 @@ public class DeleteTreinoServlet extends HttpServlet{
 
 
             new CadastroTreinoDao().deleteTreinoById(cadId);
+
+
 
             resp.sendRedirect("/buscatreinos123");
 
