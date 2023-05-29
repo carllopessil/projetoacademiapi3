@@ -16,19 +16,22 @@
         <nav class="list-itens">
             <li><a href="index.jsp">Home</a></li>
             <li><form action="/buscatreinos123" method="get"><button class="btn-primary" type="submit">DELETAR TREINOS</button></form></li>
-      </nav>
-        <div class="usuario-dropdown">
-            <div class="dropdown-toggle">
-            ${nome} <a href="/atualizaCadastroUsuario"><img src="Imagem/usuario.png" >
-            </a>
-            <a href="InicioLoged.jsp"><img src="Imagem/peso.png" >
-                <div class="dropdown-menu">
-                    <a href="/logout" class="logout-link">Logout</a>
-                </div>
 
-            </div>
-        </div>
-    </div>
+
+      </nav>
+        <nav class="dropdown hover">
+
+                <a class="primeiro-item"> ${nome}</a>
+                <ul>
+                  <li><a href="/atualizaCadastroUsuario" title="Html5">atualiza Cadastro</a></li>
+                  <li><a href="InicioLoged.jsp" title="Jquery"> Tela inicial</a></li>
+                  <li><a href="/logout" title="Css3">Logout</a></li>
+                </ul>
+
+              </nav>
+
+</div>
+
 </header>
 <body>
 <%-- <div Var="nome" items="nome">
