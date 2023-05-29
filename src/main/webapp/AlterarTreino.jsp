@@ -3,7 +3,7 @@
 
 <head>
 <script src="https://kit.fontawesome.com/3df637a2f2.js" crossorigin="anonymous"></script>
-<link href="css/styles-CadastroTreino.css" rel="stylesheet" type="text/css"/>
+<link href="css/styles-CadastroTreinos.css" rel="stylesheet" type="text/css"/>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
   <meta charset="UTF-8">
