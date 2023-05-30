@@ -10,25 +10,32 @@
     <title>Page Academia</title>
 </head>
 
+
+
+
 <header>
     <div class="menu-content">
         <img src="Imagem/teste.png"> <h1 class="logo"> GYM-CENTER</h1>
         <nav class="list-itens">
-            <li><a href="index.jsp">Home</a></li>
+                    <li> <a href="#" onclick="event.preventDefault(); document.getElementById('formTelaInicial').submit();">Tela inicial</a>
+                        </li>
+                        <form id="formTelaInicial" action="/TelaInicialLogada" method="post"></form>
             <li><form action="/buscatreinos123" method="get"><button class="btn-primary" type="submit">DELETAR TREINOS</button></form></li>
-
 
       </nav>
         <nav class="dropdown hover">
-
                 <a class="primeiro-item"> ${nome}</a>
+                <img src="Imagem/usuario.png" >
+                <img src="Imagem/peso.png" >
                 <ul>
-                  <li><a href="/atualizaCadastroUsuario" title="Html5">atualiza Cadastro</a></li>
-                  <li><a href="InicioLoged.jsp" title="Jquery"> Tela inicial</a></li>
-                  <li><a href="/logout" title="Css3">Logout</a></li>
-                </ul>
+                  <li><form id="formAtualizaCadastro" action="/atualizaCadastroUsuario" method="post"></form></li>
+               <li><a href="teste" onclick="event.preventDefault(); document.getElementById('formAtualizaCadastro').submit();" title="Html5">Atualizar Cadastro</a>                             </li>
+               <li><a href="/logout" title="Css3">Logout</a></li>
 
+              </ul>
               </nav>
+
+
 
 </div>
 

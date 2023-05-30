@@ -10,32 +10,30 @@
 
   <header>
       <div class="menu-content">
+          <img src="Imagem/teste.png"> <h1 class="logo"> GYM-CENTER</h1>
+          <nav class="list-itens">
+                      <li> <a href="#" onclick="event.preventDefault(); document.getElementById('formTelaInicial').submit();">Tela inicial</a>
+                          </li>
+                          <form id="formTelaInicial" action="/TelaInicialLogada" method="post"></form>
+          <li><form action="/create-treino" method="post"><button class="btn-primary" type="submit">CADASTRAR TREINO</button></form></li>
 
-          <img src="Imagem/ff.png"> <h1 class="logo">
-           GYM-CENTER</h1>
+        </nav>
+          <nav class="dropdown hover">
+                  <a class="primeiro-item"> ${nome}</a>
+                  <img src="Imagem/usuario.png" >
+                  <img src="Imagem/peso.png" >
+                  <ul>
+                    <li><form id="formAtualizaCadastro" action="/atualizaCadastroUsuario" method="post"></form></li>
+                 <li><a href="teste" onclick="event.preventDefault(); document.getElementById('formAtualizaCadastro').submit();" title="Html5">Atualizar Cadastro</a>                             </li>
+                 <li><a href="/logout" title="Css3">Logout</a></li>
 
-              <nav class="list-itens">
-                  <li><a href="index.jsp">Home</a></li>
-                  <li><form action="/create-treino" method="post"><button class="btn-primary" type="submit">CADASTRAR TREINO</button></form></li>
-              </ul>
-          </nav>
-          <div class="usuario-dropdown">
-                      <div class="dropdown-toggle">
-                      ${nome} <a href="/atualizaCadastroUsuario"><img src="Imagem/usuario.png" >
-                      </a>
-                      <a href="InicioLoged.jsp"><img src="Imagem/peso.png" >
-                          <div class="dropdown-menu">
-                              <a href="/logout" class="logout-link">Logout</a>
-                          </div>
-
-                      </div>
-                  </div>
-              </div>
-          </header>
+                </ul>
+                </nav>
 
 
 
-      </div>
+  </div>
+
   </header>
 
   <body>
@@ -74,6 +72,5 @@
 <div class="frases">
 <h1>Gerencie seus treinos a qualquer momento</h1>
 </div>
-
   </body>
 </html>
