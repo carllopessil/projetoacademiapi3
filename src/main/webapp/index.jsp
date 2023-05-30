@@ -39,5 +39,10 @@
 
 <a href="testePOP.jsp">Usuário</a>
 
+    <form action="/TelaInicialLogada" method="post">
+        <button type="submit">teste</button>
+
+</form>
+
 </body>
 </html>

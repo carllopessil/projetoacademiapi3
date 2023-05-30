@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet("/TelaInicialLogada")
-public class InicioLogedServlet {
+public class InicioLogedServlet  extends HttpServlet{
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String cpf = (String) req.getSession().getAttribute("cpf");
