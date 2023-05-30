@@ -131,7 +131,6 @@
 <button type="submit" name="enviar">atualizar cadastro<//button>
 </form>
 </div>
-
 <form  class="cadas" action="/create-treino" method="post">
     <button type="submit">CADASTRAR TREINO</button>
 </form>
