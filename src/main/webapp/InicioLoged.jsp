@@ -235,6 +235,7 @@
 
      <div class="semana">
           <div id="container">
+          <h2>Historico De Frequencia de treinos</h2>
              </div>
              <form action="/InserirStatusServlet" method="post">
                      <button class="testeButton" type="submit" name="status" value="true">treinei</button> <button type="submit" value="false">Faltei</button>
