@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
     <script src="https://kit.fontawesome.com/3df637a2f2.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
         <%@ page contentType="text/html; charset=UTF-8" %>
           <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GYM-CENTER</title>
     <style>
+    .slot {
+                width: 30px;
+                height: 30px;
+                border: 1px solid black;
+                display: inline-block;
+            }
         body {
                     background-color: #3D3D3D;
                     font-family: Arial, sans-serif;
@@ -216,15 +222,32 @@
     </div>
 
      <div class="semana">
-            <h2>MES</h2>
-            <p>3X Peck-Deck</p>
-            <p>3X Remada</p>
-            <p>4X Desenvolvimento</p>
-           <form action="MeuServlet" method="post">
-                           <button type="submit" name="dia" value="domingo">Treino Completo</button>
-                   </form>
+          <div id="container">
+             </div>
+             <form action="/InserirStatusServlet" method="post">
+                     <button type="submit" name="status" value="true">treinei</button> <button type="submit" value="false">Faltei</button>
+             </form>
         </div>
 </div>
+ <script>
+        const container = document.getElementById('container');
+
+        // Crie 30 elementos .slot e adicione-os ao container
+        for (let i = 0; i < 30; i++) {
+            const slot = document.createElement('div');
+            slot.classList.add('slot');
+            container.appendChild(slot);
+        }
+
+        fetch('/HistoryServlet')
+            .then(response => response.json())
+            .then(data => {
+                const slots = document.querySelectorAll('.slot');
+                data.forEach((status, index) => {
+                    slots[index].style.backgroundColor = status ? 'green' : 'red';
+                });
+            });
+    </script>
 </body>
 
 
