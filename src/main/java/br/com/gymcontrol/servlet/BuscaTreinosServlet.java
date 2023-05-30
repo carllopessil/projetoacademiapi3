@@ -2,6 +2,7 @@ package br.com.gymcontrol.servlet;
 
 
 import br.com.gymcontrol.dao.CadastroTreinoDao;
+import br.com.gymcontrol.dao.UserDao;
 import br.com.gymcontrol.model.CadastroTreino;
 
 import javax.servlet.ServletException;
@@ -20,6 +21,9 @@ public class BuscaTreinosServlet extends HttpServlet {
             throws ServletException, IOException {
         String diaSemana = request.getParameter("dia");
         String cpf = (String) request.getSession().getAttribute("cpf");
+        String nome = UserDao.PegaNome(request);
+        System.out.println(nome);
+
 
         if (cpf == null) {
             response.sendRedirect("TelaPrincipal.jsp"); // Redireciona para a página de login
@@ -48,6 +52,7 @@ public class BuscaTreinosServlet extends HttpServlet {
             resultados = CadastroTreinoDao.buscarDadosPorDiaSemana("Domingo", cpf);
         }
 
+            request.setAttribute("nome", nome);
             request.setAttribute("resultados", resultados);
             request.getRequestDispatcher("pagina-de-resultado.jsp").forward(request, response);
         }
