@@ -91,6 +91,18 @@
                     position: relative;
                     margin-bottom: 1px;
                 }
+                .testeButton {
+                                    background-color: blue;
+                                    border: none;
+                                    border-radius: 5px;
+                                    color: #FFF;
+                                    cursor: pointer;
+                                    font-weight: bold;
+                                    padding: 0.5rem 1rem;
+                                    margin-left: 18%;
+                                    position: relative;
+                                    margin-bottom: 1px;
+                                }
 
                 .teste {
                     display: flex;
@@ -225,7 +237,7 @@
           <div id="container">
              </div>
              <form action="/InserirStatusServlet" method="post">
-                     <button type="submit" name="status" value="true">treinei</button> <button type="submit" value="false">Faltei</button>
+                     <button class="testeButton" type="submit" name="status" value="true">treinei</button> <button type="submit" value="false">Faltei</button>
              </form>
         </div>
 </div>
