@@ -19,7 +19,7 @@
     <div class="header">
         <h2>Atualizar Conta<span class="badge badge-secondary"></span></h2>
     </div>
-    <form action="atualiza" method="post" id="form" class="form">
+    <form action="/atualizaUsuario123" method="post" id="form" class="form">
         <div class="form-control">
             <label for="name">Nome de usuário</label>
             <input
@@ -104,10 +104,7 @@
                     />
                     <small>Mensagem de erro</small>
                 </div>
-
-
-
-        <button type="submit">Atualizar</button>
+       <button type="submit">Register</button>
     </form>
 
 </div>
@@ -116,4 +113,4 @@
 </body>
 
 </html>
-<script src="\js\scripCadastro.js"></script>
+<script src="\js\scripAtualizar.js"></script>

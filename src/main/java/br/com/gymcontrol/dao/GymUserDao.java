@@ -39,34 +39,6 @@ public class GymUserDao {
 
 
         }
-
-        public void UpdateUser(GymUser gymUser, HttpServletRequest request){
-         String SQL = "UPDATE GYMUSER SET NAME=?, SOBRENOME=?, SEXO = ?, DATEBITH=?, EMAIL = ?, SET SENHA=? WHERE CPF=? ";
-         try{
-             String cpf = (String) request.getSession().getAttribute("cpf");
-
-             if (cpf != null){
-             Connection connection = DriverManager.getConnection("jdbc:h2:~/test","sa","sa");
-             System.out.println("success in connection");
-             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
-                 preparedStatement.setString(1, gymUser.getName());
-                 preparedStatement.setString(2, gymUser.getSobrenome());
-                 preparedStatement.setString(3, gymUser.getSexo());
-                 preparedStatement.setString(4, gymUser.getDateBirth());
-                 preparedStatement.setString(5, gymUser.getEmail());
-                 preparedStatement.setString(6, gymUser.getSenha());
-             System.out.println("success in update gymUser");
-
-             connection.close();
-
-             }
-         }catch (Exception e ){
-             System.out.println("deu ruim na conexão");
-
-    }
-
-
-    }
     public static List<Usuario> selectUser (String cpf){
         List<Usuario> resultados = new ArrayList<>();
         String SQL = "SELECT * FROM GYMUSER WHERE CPF = ?";
@@ -97,6 +69,29 @@ public class GymUserDao {
             System.out.println("erro: "+e.getMessage());
         }
     return resultados;
+    }
+    public boolean updateUser(Usuario usuario, String cpf) {
+        String SQL = "UPDATE GYMUSER SET NAME=?, SOBRENOME=?, SEXO=?, DATEBIRTH=?, EMAIL=?, SENHA=? WHERE CPF=?";
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            System.out.println("success in connection Atualizar");
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setString(1, usuario.getNome());
+            preparedStatement.setString(2, usuario.getSobrenome());
+            preparedStatement.setString(3, usuario.getSexo());
+            preparedStatement.setString(4, usuario.getDatebirth());
+            preparedStatement.setString(5, usuario.getEmail());
+            preparedStatement.setString(6, usuario.getSenha());
+            preparedStatement.setString(7, cpf);
+
+            int affectedRows = preparedStatement.executeUpdate();
+            System.out.println(affectedRows);
+            return affectedRows > 0;
+
+        } catch (Exception e) {
+            System.out.println("erro: " + e.getMessage());
+            return false;
+        }
     }
 }
 
