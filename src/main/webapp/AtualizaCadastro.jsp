@@ -14,7 +14,7 @@
 </head>
 <body>
 
-
+<c:forEach var="usuario" items="${AtualizaUsuario}">
 <div class="container">
     <div class="header">
         <h2>Atualizar Conta<span class="badge badge-secondary"></span></h2>
@@ -27,30 +27,33 @@
                     name="name"
                     type="text"
                     id="name"
+                    value="${usuario.nome}"
                     placeholder="Digite seu novo nome de usuário"
             />
             <small>Mensagem de erro</small>
         </div>
 
             <div class="form-control">
-            <label for="sobrenome">Email</label>
+            <label for="sobrenome">Sobrenome</label>
 
             <input
                     required="required"
                     name="sobrenome"
                     type="text"
                     id="sobrenome"
+                    value="${usuario.sobrenome}"
                     placeholder="sobrenome"
             />
             <small>Mensagem de erro</small>
         </div>
         <div class="form-control">
             <div>
-                <label for = "sexo">Sexo</label>
+                <label for="sexo">Sexo</label>
             </div>
             <select
                     name="sexo"
-                    id=sexo
+                    id="sexo"
+                    value="${usuario.sexo}"
                     required="required">
                 <option>selecione seu sexo</option>
                 <option>masculino</option>
@@ -67,6 +70,7 @@
                     name="DateBirth"
                     type="date"
                     id="DateBirth"
+                    value="${usuario.datebirth}"
             />
             <small>Mensagem de erro</small>
         </div>
@@ -81,6 +85,7 @@
                     name="email"
                     type="text"
                     id="Email"
+                    value="${usuario.email}"
                     placeholder="Digite seu email"
             />
             <small>Mensagem de erro</small>
@@ -94,6 +99,7 @@
                             name="senha"
                             type="password"
                             id="senha"
+                            value="${usuario.senha}"
                             placeholder="Digite sua senha"
                     />
                     <small>Mensagem de erro</small>
@@ -105,10 +111,7 @@
     </form>
 
 </div>
-<div var= "nome" items = "Sexo">
-                <h1></h1>
-                <h2>aaaaaaaaaa${nome}aaaaaaaaa</h2>
-</div>
+</c:forEach>
 
 </body>
 

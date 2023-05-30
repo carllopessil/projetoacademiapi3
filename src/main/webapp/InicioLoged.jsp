@@ -39,32 +39,33 @@
             display: inline-block;
         }
         .semana {
-
             background-color: #000;
             border-radius: 10px;
             color: #FFF;
             padding: 1rem;
             width: 320px;
             height: 240px;
-            position:relative;
+            position: relative;
             display: flex;
-            flex-wrap: wrap;
+            display: inline-block;
             justify-content: space-between;
             margin: 2rem;
-            display: inline-block;
+
         }
         .semana h2 {
-        text-align: center;
+            text-align: center;
             color: red;
             font-size: 20px;
             font-weight: bold;
-            margin-bottom: 4px;
+            margin-top: 4px;
         }
         .semana p {
             color: blue;
             font-size: 25px;
             font-weight: bold;
-            margin: 10px;
+            margin left: 10px;
+            margin top: 10px;
+
         }
         button{
             background-color: blue;
@@ -80,6 +81,7 @@
         }
         .teste{
         margin-left: 5%;
+        align-items: baseline;
         }
         .cadas{
         margin-left:44%

@@ -22,23 +22,10 @@ public class AtualizaCadastroServlet extends HttpServlet{
         System.out.println(cpf);
         resultadosUsuario = new GymUserDao().selectUser(cpf);
 
-        Usuario usuario= resultadosUsuario.get(0);
+        request.setAttribute("AtualizaUsuario",resultadosUsuario);
 
 
-
-        request.setAttribute("NomeUsuario", usuario.getNome());
-        request.setAttribute("Sobrenome", usuario.getSobrenome());
-        request.setAttribute("Sexo", usuario.getSexo());
-        request.setAttribute("DateBirth", usuario.getDatebirth());
-        request.setAttribute("Email", usuario.getEmail());
-        request.setAttribute("Senha", usuario.getSenha());
-
-        request.getRequestDispatcher("index.jsp").forward(request, response);
-
-
-
-
-
+        request.getRequestDispatcher("AtualizaCadastro.jsp").forward(request, response);
 
     }
 
