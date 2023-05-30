@@ -10,85 +10,96 @@
     <title>GYM-CENTER</title>
     <style>
         body {
-            background-color: #3D3D3D;
-            font-family: Arial, sans-serif;
-            margin: 0;
-        }
-        header {
-            background-color: #090E1D;
-            display: flex;
-            justify-content: space-between;
-            padding: 1rem 2rem;
-        }
-        header h1 {
-            color: red;
-            font-weight: bold;
-            margin: 0;
-        }
-        header span {
-            color: red;
-            font-weight: bold;
-            font-size: 20px;
-            margin-top: 16px;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin: 2rem;
-            display: inline-block;
-        }
-        .semana {
-            background-color: #000;
-            border-radius: 10px;
-            color: #FFF;
-            padding: 1rem;
-            width: 320px;
-            height: 240px;
-            position: relative;
-            display: flex;
-            display: inline-block;
-            justify-content: space-between;
-            margin: 2rem;
+                    background-color: #3D3D3D;
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                }
 
-        }
-        .semana h2 {
-            text-align: center;
-            color: red;
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 4px;
-        }
-        .semana p {
-            color: blue;
-            font-size: 25px;
-            font-weight: bold;
-            margin left: 10px;
-            margin top: 10px;
+                header {
+                    background-color: #090E1D;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 1rem 2rem;
+                }
 
-        }
-        button{
-            background-color: blue;
-            border: none;
-            border-radius: 5px;
-            color: #FFF;
-            cursor: pointer;
-            font-weight: bold;
-            padding: 0.5rem 1rem;
-            margin-left: 28%;
-            position: relative;
-            margin-bottom: 1px;
-        }
-        .teste{
-        margin-left: 5%;
-        align-items: baseline;
-        }
-        .cadas{
-        margin-left:44%
-        }
-        .ccc{
-            height: 30px;
-        }
+                header h1 {
+                    color: red;
+                    font-weight: bold;
+                    margin: 0;
+                }
+
+                header span {
+                    color: red;
+                    font-weight: bold;
+                    font-size: 20px;
+                    margin-top: 16px;
+                }
+
+                .container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin: 2rem;
+                    display: inline-block;
+                }
+
+                .semana {
+                    background-color: #000;
+                    border-radius: 10px;
+                    color: #FFF;
+                    padding: 1rem;
+                    width: calc(22% - 2rem);
+                    height: 320px;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin: 1rem;
+                }
+
+                .semana h2 {
+                    text-align: center;
+                    color: red;
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-top: 4px;
+                }
+
+                .semana p {
+                    color: blue;
+                    font-size:25px;
+                    font-weight: bold;
+                    margin-left: 10px;
+                    margin-top: 10px;
+                }
+
+                button {
+                    background-color: blue;
+                    border: none;
+                    border-radius: 5px;
+                    color: #FFF;
+                    cursor: pointer;
+                    font-weight: bold;
+                    padding: 0.5rem 1rem;
+                    margin-left: 28%;
+                    position: relative;
+                    margin-bottom: 1px;
+                }
+
+                .teste {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: flex-start;
+                    margin-left: 5%;
+                }
+
+                .cadas {
+                    margin-left: 44%
+                }
+
+                .ccc {
+                    height: 30px;
+                }
     </style>
 </head>
 <body>
@@ -97,15 +108,16 @@
     <h1>${nome}</h1>
 </header>
 <header class="ccc">
+<div>
+<form action="/atualizaCadastroUsuario" method="post">
+<button type="submit" name="enviar">atualizar cadastro<//button>
+</form>
+</div>
 
 <form  class="cadas" action="/create-treino" method="post">
     <button type="submit">CADASTRAR TREINO</button>
 </form>
 </header>
-<form action="/atualizaCadastroUsuario" method="post">
-<button type="submit" name="enviar">atualizar cadastro<//button>
-</form>
-
 <div class="teste">
 
     <div class="semana">
