@@ -12,13 +12,30 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <title>Cadastro Cliente</title>
+
+    <style>
+     .testeButton {
+                                        background-color: red;
+                                        border: none;
+                                        border-radius: 5px;
+                                        color: #FFF;
+                                        cursor: pointer;
+                                        font-weight: bold;
+                                        padding: 0.5rem 1rem;
+                                        margin-left: 38%;
+                                        margin-bottom:0%;
+                                        position: relative;
+
+                                    }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
-
 <div class="container">
+<div class="header">
+        <a href="TelaPrincipal.jsp"><button class="testeButton" type="submit">Inicio</button></a>
+</div>
     <div class="header">
         <h2>Criar uma conta<span class="badge badge-secondary"></span></h2>
     </div>
