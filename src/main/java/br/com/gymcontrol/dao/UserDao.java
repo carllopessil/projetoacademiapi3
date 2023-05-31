@@ -1,6 +1,7 @@
 package br.com.gymcontrol.dao;
 
 import br.com.gymcontrol.model.User;
+import br.com.gymcontrol.servlet.config.ConnectionPoolConfig;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.*;
@@ -14,7 +15,7 @@ public class UserDao {
     public boolean verifyCredentials(User user) {
         boolean isValid = false;
 
-        try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD)) {
+        try (Connection connection = ConnectionPoolConfig.getConnection();) {
             String sql = "SELECT COUNT(*) FROM GYMUSER WHERE EMAIL = ? AND SENHA = ?";
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
                 statement.setString(1, user.getUsername());

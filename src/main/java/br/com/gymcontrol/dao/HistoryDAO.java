@@ -1,5 +1,7 @@
 package br.com.gymcontrol.dao;
 
+import br.com.gymcontrol.servlet.config.ConnectionPoolConfig;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -16,7 +18,7 @@ public class HistoryDAO {
     public List<Boolean> getLast30DaysStatus(String cpf) {
         List<Boolean> history = new ArrayList<>();
 
-        try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD)) {
+        try (Connection connection = ConnectionPoolConfig.getConnection()) {
             String sql = "SELECT status FROM history WHERE CPF = ? ORDER BY date DESC LIMIT 30;";
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, cpf);
@@ -32,7 +34,7 @@ public class HistoryDAO {
         return history;
     }
     public void insertStatus(String cpf, boolean status) {
-        try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD)) {
+        try (Connection connection = ConnectionPoolConfig.getConnection()) {
             String sql = "INSERT INTO history (CPF, status, date) VALUES (?, ?, CURRENT_DATE);";
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, cpf);

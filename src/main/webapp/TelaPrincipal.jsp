@@ -14,7 +14,7 @@
 </head>
 <body bgcolor="#23282B">
 <header>
-    <h1><img src="Imagem/ff.png">GYM-Center</h1>
+    <h1><img src="Imagem/">GYM-Center</h1>
     <span><a href="#openModal"><h2>Login</h2></a></span>
 
     <div id="openModal" class="modalDialog">
@@ -49,38 +49,38 @@
 
                 <img decoding="async" loading="lazy" src="Imagem/academia-app.png" width="100%" height="100">
                 <h3>GYM CENTER</h3>
-                <p> A GYM CENTER é um app de academia abrangente e intuitivo, projetado para fornecer a você todas as ferramentas necessárias para alcançar seus objetivos de condicionamento físico de forma prática e eficiente.</p>
+                <p>GYM CENTER é um aplicativo de academia abrangente e intuitivo projetado para fornecer todas as ferramentas necessárias para atingir suas metas de condicionamento físico de maneira conveniente e eficiente.</p>
             </div>
         </div>
 
         <div class="secao4-div-2">
             <div class="secao4-div-2-coluna">
 
-                <img decoding="async" loading="lazy" src="Imagem/Treino-musculacao-definicao-masculino-3.jpg" width="100%" height="80">
+                <img decoding="async" loading="lazy" src="Imagem/Cadastro.png" width="100%" height="80">
                 <h3>TREINOS E PROGRAMAS DE EXERCÍCIOS</h3>
-                <p>No nosso app uma existe biblioteca de treinos e programas de exercícios para diferentes objetivos, como perda de peso, ganho de massa muscular ou condicionamento físico geral. </p>
+                <p>Monte você mesmo sua rotina de treino de acordo com seus objetivos e disponibilidade! </p>
             </div>
         </div>
 
         <div class="secao4-div-3">
             <div class="secao4-div-3-coluna">
 
-                <img decoding="async" loading="lazy" src="Imagem/Imagem1.png" width="100%" height="80">
+                <img decoding="async" loading="lazy" src="Imagem/treino.png" width="100%" height="80">
                 <h3>SUAS SEMANAS DE TREINO</h3>
-                <p> Aqui na GYM CENTER você segue um programa de exercícios estruturado para atingir seus objetivos e acompanhar seu progresso ao longo do tempo.</p>
+                <p> Aqui você pode visualizar seus treinos atribuídos para cada dia da semana, ajudando você a planejar melhor seus objetivos.</p>
             </div>
         </div><div class="secao4-div-3">
         <div class="secao4-div-3-coluna">
 
             <img decoding="async" loading="lazy" src="Imagem/academia%203.jpg" width="100%" height="80">
             <h3>PLANOS DE TREINO PERSONALIZADOS</h3>
-            <p> Nossos planos de treinos  são projetado para ajudar você a alcançar metas específicas, como perda de peso, ganho de massa muscular, aumento da resistência ou melhoria do condicionamento  de forma segura e eficaz. </p>
+            <p> Nossos planos de treinos são projetado para ajudar você a alcançar metas específicas, como perda de peso, ganho de massa muscular, aumento da resistência ou melhoria do condicionamento de forma segura e eficaz. </p>
         </div>
     </div>
         <div class="secao4-div-3">
             <div class="secao4-div-3-coluna">
 
-                <img decoding="async" loading="lazy" src="Imagem/images%202.jpg" width="100%" height="80">
+                <img decoding="async" loading="lazy" src="Imagem/image.png" width="100%" height="80">
                 <h3>REGISTROS E ACOMPANHAMENTOS</h3>
                 <p> O registros e acompanhamentos do nosso app  faz você chegar nos seus objetivos e nas necessidades  de forma segura e equilibrada é mantendo  um registro detalhado do seu progresso.  </p>
             </div>
@@ -89,9 +89,9 @@
         <div class="secao4-div-3">
             <div class="secao4-div-3-coluna">
 
-                <img decoding="async" loading="lazy" src="Imagem/Imagem4.png" width="100%" height="80">
+                <img decoding="async" loading="lazy" src="Imagem/controle.png" width="100%" height="80">
                 <h3>MONITORAMENTO DE PROGRESSO</h3>
-                <p>Ao realizar o monitoramento de progresso em seu programa de treinamento, você pode registrar e acompanhar várias informações relevantes para avaliar seu desenvolvimento ao longo do tempo. </p>
+                <p>Ao implementar o monitoramento de progresso em seu programa de treinamento, você pode registrar e rastrear uma variedade de informações para avaliar seu desenvolvimento ao longo do tempo. </p>
             </div>
         </div>
 

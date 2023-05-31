@@ -2,6 +2,7 @@ package br.com.gymcontrol.dao;
 
 import br.com.gymcontrol.model.CadastroTreino;
 import br.com.gymcontrol.model.TreinosCadastrados;
+import br.com.gymcontrol.servlet.config.ConnectionPoolConfig;
 
 
 import javax.servlet.http.HttpServletRequest;
@@ -26,7 +27,7 @@ public class CadastroTreinoDao {
             String cpf = (String) request.getSession().getAttribute("cpf");
 
             if (cpf != null){
-                Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+                Connection connection = ConnectionPoolConfig.getConnection();
                 System.out.println("success in database connection");
 
                 // Obtém o CPF da sessão de login do objeto request
@@ -76,7 +77,7 @@ public class CadastroTreinoDao {
 
         try {
 
-            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            Connection connection = ConnectionPoolConfig.getConnection();
 
             System.out.println("success in database connection");
 
@@ -121,7 +122,7 @@ public class CadastroTreinoDao {
 
         try {
 
-            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            Connection connection = ConnectionPoolConfig.getConnection();
 
             System.out.println("success in database connection");
 
@@ -146,7 +147,7 @@ public class CadastroTreinoDao {
         String SQL = "SELECT * FROM TREINOSCADASTRO WHERE CPF = ?";
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            Connection connection = ConnectionPoolConfig.getConnection();
             System.out.println("success in database connection");
 
             // Obtém o CPF da sessão de login do objeto request
@@ -188,9 +189,9 @@ public class CadastroTreinoDao {
     public static List<CadastroTreino> buscarDadosPorDiaSemana(String diaSemana, String cpf) {
         List<CadastroTreino> resultados = new ArrayList<>();
 
-        try (Connection conn = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa")) {
+        try (Connection connection = ConnectionPoolConfig.getConnection()) {
             String query = "SELECT * FROM TREINOSCADASTRO WHERE diaSemana = ? AND cpf = ?";
-            PreparedStatement stmt = conn.prepareStatement(query);
+            PreparedStatement stmt = connection.prepareStatement(query);
             System.out.println("validando o select");
             stmt.setString(1, diaSemana);
             stmt.setString(2, cpf);
@@ -219,9 +220,9 @@ public class CadastroTreinoDao {
 
     public static List<CadastroTreino> buscarDadosPorDiaSemana3(String diaSemana, String cpf) {
         List<CadastroTreino> resultados = new ArrayList<>();
-        try (Connection conn = DriverManager.getConnection(URL, USUARIO, SENHA)) {
+        try (Connection connection = ConnectionPoolConfig.getConnection()) {
             String query = "SELECT TOP 3 CARGA, EXERCICIO FROM TREINOSCADASTRO WHERE DIASEMANA = ? AND CPF = ?";
-            PreparedStatement stmt = conn.prepareStatement(query);
+            PreparedStatement stmt = connection.prepareStatement(query);
             System.out.println("validando o select " + diaSemana);
             stmt.setString(1, diaSemana);
             stmt.setString(2, cpf);
