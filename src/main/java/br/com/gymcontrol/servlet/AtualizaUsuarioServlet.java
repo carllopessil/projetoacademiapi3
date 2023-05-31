@@ -26,9 +26,9 @@ public class AtualizaUsuarioServlet extends HttpServlet {
 
         boolean isUpdated = new GymUserDao().updateUser(usuario, cpf);
         if (isUpdated) {
-            response.sendRedirect("AlterarTreino.jsp");
+            request.getRequestDispatcher("/TelaInicialLogada").forward(request, response);
         } else {
-            response.sendRedirect("index.jsp"); // Redirecionar para a página de erro
+            response.sendRedirect("ErroAtualizarCadastro.jsp");
         }
     }
 }
