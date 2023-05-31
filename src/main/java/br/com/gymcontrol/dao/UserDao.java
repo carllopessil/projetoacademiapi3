@@ -78,33 +78,4 @@ public class UserDao {
         return Name;
     }
 }
-///
-//        try {
-//
-//            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-//
-//            System.out.println("success in database connection");
-//
-//            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
-//
-//            preparedStatement.setString(1, user.getUsername());
-//            ResultSet resultSet = preparedStatement.executeQuery();
-//
-//            System.out.println("success in select username");
-//
-//            String CPF= resultSet.getString("CPF");
-//
-//
-//
-//
-//            connection.close();
-//
-//            return CPF;
-//
-//        } catch (Exception e) {
-//
-//            System.out.println("Error: " + e.getMessage());
-//
-//            return null;
-//
-//
+

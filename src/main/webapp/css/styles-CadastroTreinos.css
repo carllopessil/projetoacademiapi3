@@ -38,7 +38,7 @@ label {
 }
 
 .second-text { /*A FRASE O CORPO ALCANÇA...-–>*/
-    font-size: 20px;
+    font-size: 25px;
     color: rgb(165, 165, 165);
     text-transform: uppercase;
      text-align:center
@@ -102,7 +102,7 @@ align: center;
 font-family: helvetica;
 color: white;
 border-color: green;
-font-size: 18;
+font-size: 28;
   margin-bottom: 10px;
   font-family: Arial Bold;
 
@@ -203,6 +203,10 @@ font-size: 1em;
     color: rgb(165, 165, 165);
     text-transform: uppercase;
      text-align:center
+
+
+
+
 }
 .dropdown {
   width: 180px;

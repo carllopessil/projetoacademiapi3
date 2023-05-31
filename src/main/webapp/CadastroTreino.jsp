@@ -15,7 +15,7 @@
 
 <header>
     <div class="menu-content">
-        <img src="Imagem/teste.png"> <h1 class="logo"> GYM-CENTER</h1>
+        <img src="Imagem/logo.png"> <h1 class="logo"> GYM-CENTER</h1>
         <nav class="list-itens">
                     <li> <a href="#" onclick="event.preventDefault(); document.getElementById('formTelaInicial').submit();">Tela inicial</a>
                         </li>
@@ -35,15 +35,10 @@
               </ul>
               </nav>
 
-
-
 </div>
 
 </header>
 <body>
-<%-- <div Var="nome" items="nome">
-         <h1>${nome}</h1>
-           </div> --%>
 
 
 
@@ -64,7 +59,7 @@
             </c:forEach>
         </select>
 
-        <label>Escolha a quantidade de carga:</label>
+        <label>Escolha a quantidade de series:</label>
         <select class="custom-select" name="carga" id="carga" >
             <c:forEach var="car" items="${cars}">
                 <option value="${car.carga}">${car.carga}</option>

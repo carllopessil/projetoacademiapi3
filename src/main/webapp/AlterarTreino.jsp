@@ -10,7 +10,7 @@
 
   <header>
       <div class="menu-content">
-          <img src="Imagem/teste.png"> <h1 class="logo"> GYM-CENTER</h1>
+          <img src="Imagem/logo.png"> <h1 class="logo"> GYM-CENTER</h1>
           <nav class="list-itens">
                       <li> <a href="#" onclick="event.preventDefault(); document.getElementById('formTelaInicial').submit();">Tela inicial</a>
                           </li>
@@ -45,7 +45,7 @@
   		<tr><th>Dia da semana</th>
   				<th>Exercicio</th>
   				<th>Repeticao</th>
-  				<th>Carga</th>
+  				<th>Series</th>
   				<th>Apagar</th>
 
   			</tr>

@@ -19,6 +19,7 @@ public class CadastroTreinoDao {
     }
 
     public void createTreino(CadastroTreino cadastroTreino, HttpServletRequest request) {
+        //CREATE TABLE TREINOSCADASTRO(ID INT AUTO_INCREMENT,EXERCICIO VARCHAR(100) NOT NULL,REPETICAO VARCHAR(100) NOT NULL,CARGA VARCHAR(100) NOT NULL,DIASEMANA VARCHAR(100),CPF VARCHAR(100) NOT NULL,PRIMARY KEY(ID));
         String SQL = "INSERT INTO TREINOSCADASTRO (EXERCICIO, REPETICAO, CARGA, DIASEMANA, CPF) VALUES (?, ?, ?, ?, ?)";
 
         try {
@@ -50,6 +51,7 @@ public class CadastroTreinoDao {
               //  JOptionPane.showMessageDialog(null, "Treino cadastrado");
 
 
+
             } else {
                 System.out.println("VOLTA PARA A TELA DE LOGIN");
                 JOptionPane.showMessageDialog(null, "Entre com seu login");
@@ -68,6 +70,7 @@ public class CadastroTreinoDao {
 
 
     public List<CadastroTreino> findAllTreino() {
+        //CREATE TABLE TREINO(ID INT AUTO_INCREMENT, EXERCICIO VARCHAR(100) NOT NULL, REPETICAO VARCHAR(100) NOT NULL, CARGA VARCHAR(100) NOT NULL, DIASEMANA VARCHAR(100) NULL, PRIMARY KEY(ID));
 
         String SQL = "SELECT * FROM TREINO";
 
