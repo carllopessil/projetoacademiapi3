@@ -56,7 +56,7 @@
         <div class="secao4-div-2">
             <div class="secao4-div-2-coluna">
 
-                <img decoding="async" loading="lazy" src="Imagem/Cadastro.png" width="100%" height="80">
+                <img decoding="async" loading="lazy" src="Imagem/cadastro.png" width="100%" height="80">
                 <h3>TREINOS E PROGRAMAS DE EXERCÍCIOS</h3>
                 <p>Monte você mesmo sua rotina de treino de acordo com seus objetivos e disponibilidade! </p>
             </div>
