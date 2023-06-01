@@ -1,5 +1,5 @@
 <html>
-
+     <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
     <meta charset="UTF-8">
@@ -67,10 +67,13 @@
         </select>
          <label>Escolha o dia da semana:</label>
            <select class="custom-select" name="diaSemana" id="diaSemana" >
-             <c:forEach var="car" items="${cars}">
-               <option value="${car.diaSemana}">${car.diaSemana}</option>
-                 </c:forEach>
-
+               <option value="Segunda-Feira">Segunda-Feira</option>
+               <option value="terca-Feira">terca-Feira</option>
+               <option value="Quarta-Feira">Quarta-Feira</option>
+               <option value="Quinta-Feira">Quinta-Feira</option>
+               <option value="Sexta-Feira">Sexta-Feira</option>
+               <option value="Sabado">Sabado</option>
+               <option value="Domingo">Domingo</option>
                 </select>
                 <br><br>
                     <button class="btn-primary" type="submit" value="Submit">Register</button>

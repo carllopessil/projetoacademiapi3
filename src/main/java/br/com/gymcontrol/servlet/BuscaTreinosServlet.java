@@ -35,7 +35,7 @@ public class BuscaTreinosServlet extends HttpServlet {
             if (diaSemana.equals("segunda")) {
                 resultados = CadastroTreinoDao.buscarDadosPorDiaSemana("Segunda-Feira", cpf);
             } else if (diaSemana.equals("terca")) {
-                resultados = CadastroTreinoDao.buscarDadosPorDiaSemana("Terça-Feira", cpf);
+                resultados = CadastroTreinoDao.buscarDadosPorDiaSemana("terca-Feira", cpf);
             } else if (diaSemana.equals("quarta")) {
                 resultados = CadastroTreinoDao.buscarDadosPorDiaSemana("Quarta-Feira", cpf);
 

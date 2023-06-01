@@ -61,7 +61,6 @@ public class CadastroTreinoDao {
             }
 
         } catch (Exception e) {
-            System.out.println("fail in connection CADASTRO DO TREINO DO USUARIO");
             System.out.println(e.getMessage());
         }
     }
@@ -73,7 +72,8 @@ public class CadastroTreinoDao {
     public List<CadastroTreino> findAllTreino() {
         //CREATE TABLE TREINO(ID INT AUTO_INCREMENT, EXERCICIO VARCHAR(100) NOT NULL, REPETICAO VARCHAR(100) NOT NULL, CARGA VARCHAR(100) NOT NULL, DIASEMANA VARCHAR(100) NULL, PRIMARY KEY(ID));
 
-        String SQL = "SELECT * FROM TREINO";
+        String SQL = "SELECT ID, EXERCICIO, REPETICAO, CARGA FROM TREINO;";
+
 
         try {
 
@@ -87,19 +87,21 @@ public class CadastroTreinoDao {
 
             List<CadastroTreino> cars = new ArrayList<>();
 
+
             while (resultSet.next()) {
 
                 String carId = resultSet.getString("id");
                 String carExercicio = resultSet.getString("exercicio");
                 String carRepeticao = resultSet.getString("repeticao");
                 String carCarga = resultSet.getString("carga");
-                String carDiaSemana = resultSet.getString("diaSemana");
 
-                CadastroTreino treino = new CadastroTreino(carId, carExercicio, carRepeticao, carCarga, carDiaSemana);
+                CadastroTreino treino = new CadastroTreino(carId, carExercicio, carRepeticao, carCarga);
 
                 cars.add(treino);
 
             }
+
+
 
             System.out.println("success in select * TREINO");
 
@@ -114,6 +116,44 @@ public class CadastroTreinoDao {
             return Collections.emptyList();
 
         }
+
+    }
+    public List DiaDaSemana() {
+        String SQL2 = " SELECT DIASEMANA FROM TREINO WHERE DIASEMANA IS NOT NULL;";
+
+        try {
+            Connection connection = ConnectionPoolConfig.getConnection();
+
+            System.out.println("success in database connection");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL2);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+            List diaSemana = new ArrayList();
+
+            while (resultSet.next()) {
+
+                String carDiaSemana = resultSet.getString("diaSemana");
+
+                CadastroTreino treino = new CadastroTreino(carDiaSemana);
+
+                diaSemana.add(treino);
+            }
+            System.out.println("success in select * TREINO dia da semana");
+
+            connection.close();
+
+            return diaSemana;
+
+        } catch (Exception e) {
+
+            System.out.println("fail in database connection no select");
+
+            return Collections.emptyList();
+
+        }
+
+
 
     }
 
@@ -182,9 +222,6 @@ public class CadastroTreinoDao {
         }
     }
 
-    private static final String URL = "jdbc:h2:~/test";
-    private static final String USUARIO = "sa";
-    private static final String SENHA = "sa";
 
     public static List<CadastroTreino> buscarDadosPorDiaSemana(String diaSemana, String cpf) {
         List<CadastroTreino> resultados = new ArrayList<>();

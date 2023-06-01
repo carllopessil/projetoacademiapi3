@@ -44,6 +44,13 @@ public class CadastroTreino {
         this.carga = carga;
         this.diaSemana = diaSemana;
     }
+    public CadastroTreino(String id, String exercicio, String repeticao, String carga) {
+        this.id = id;
+        this.exercicio = exercicio;
+        this.repeticao = repeticao;
+        this.carga = carga;
+;
+    }
     public CadastroTreino(String exercicio, String carga) {
         this.exercicio = exercicio;
         this.carga = carga;

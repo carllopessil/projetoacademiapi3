@@ -37,7 +37,7 @@ public class InicioLogedServlet  extends HttpServlet{
         resultadosSegunda = CadastroTreinoDao.buscarDadosPorDiaSemana3("Segunda-Feira", cpf);
         System.out.println("teste" + resultadosSegunda.toString());
 
-        resultadosTerca = CadastroTreinoDao.buscarDadosPorDiaSemana3("Terça-Feira", cpf);
+        resultadosTerca = CadastroTreinoDao.buscarDadosPorDiaSemana3("terca-Feira", cpf);
 
         resultadosQuarta = CadastroTreinoDao.buscarDadosPorDiaSemana3("Quarta-Feira", cpf);
 
