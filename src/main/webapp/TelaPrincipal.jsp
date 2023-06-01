@@ -58,7 +58,7 @@
 
                 <img decoding="async" loading="lazy" src="Imagem/cadastro.png" width="100%" height="80">
                 <h3>TREINOS E PROGRAMAS DE EXERCÍCIOS</h3>
-                <p>Monte você mesmo sua rotina de treino de acordo com seus objetivos e disponibilidade! </p>
+                <p>Monte você mesmo sua rotina de treino de acordo com seus objetivos e disponibilidade. </p>
             </div>
         </div>
 
